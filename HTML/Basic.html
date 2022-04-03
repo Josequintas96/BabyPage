@@ -1,12 +1,87 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <!--
+      This is the page head - it contains info the browser uses to display the page
+      You won't see what's in the head in the page
+      Scroll down to the body element for the page content
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
 
-<h1>BABY PAGE</h1>
-<p>This is the start of the work</p>
 
-</body>
-</html> 
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <title>Baby control!</title>
+
+
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <h1>
+      Gaby & Val baby mystery Quiz
+    </h1>
+    
+   <section class="stage">
+     
+     <p>
+       Welcome to our baby showerr presentation;  we wish us to participate on our baby future birth; answer thee questions below to prepare for future
+     </p>
+     
+<!--      <p>
+       hello
+     </p> -->
+     <img
+          src = "https://images.unsplash.com/photo-1617331140180-e8262094733a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80"
+          >
+     
+    </section>
+    
+    <section class="intro">
+    </section>
+    
+    <section class="stage">
+      
+       <form action="/action_page.php">
+        <label for="fname">Name  of Participant:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+
+         <label for="fname">Name for Baby:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+         
+         <label for="fname">Prospect sex for Baby:</label>
+        <select name="gender">
+            <option value="none" selected>Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+         <br></br>
+         
+         
+         <label for="fname">Prospect day of birth for baby:</label>
+        <input type="date" id="mayborn" name="mayborn" value="2022-07-05"><br><br>
+         
+         <label for="fname">Special message:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+         
+         <input type="submit" value="Submit">
+         <input type="reset">
+         
+      </form> 
+      
+     <section>
+    
+    <!-- The footer holds our remix button — you can use it for structure or cut it out ✂ -->
+    <footer class="footer">
+       
+    </footer>
+  </body>
+</html>
