@@ -13,3 +13,9 @@ Feattures:
 Areas too work:
     1. glitch
     2.Codepen
+
+vr1:
+    1. speecial messagee: the square mjust be bigger
+    2. create an index page and a result page
+    3. on result page we want everything to see on % of results
+    4. 
