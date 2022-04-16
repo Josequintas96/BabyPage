@@ -10,6 +10,7 @@ import Results from "./html/Results";
 import Intro from "./html/Intro";
 import Survey from './html/Survey';
 import Control from './html/controlX';
+import Chart from './html/chart';
 
 //function App() {
 class App extends React.Component
@@ -30,6 +31,7 @@ class App extends React.Component
                           <Route exact path="/results" element={<Results/>} />
                           <Route exact path="/survey" element={<Survey />} />
                           <Route exact path="/control" element={<Control />} />
+                          <Route exact path='/chart' element={<Chart />} />
                           {/* <Route exact path="/survey" render={(props) => (<Search Input={this.state.search_for} search_F={this.handleSearch} /> )} /> */}
                       </Routes>
                     </div>  

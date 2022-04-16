@@ -1,6 +1,43 @@
 import '../css/App.css';
+import React from "react";
+import axios from 'axios';
 
-function Survey() {
+class Survey extends React.Component
+{
+  state = {
+    details: [],
+    user: "",
+    quote: "",
+  };
+
+ 
+    handleInput = (e) => {
+      this.setState({
+          [e.target.name]: e.target.value,
+      });
+    };
+
+    handleSubmit = (e) => {
+      e.preventDefault();
+      axios
+        .post("http://localhost:8000/wel/", {
+              name: this.state.name,
+			        gender: this.state.gender,
+			        birth: this.state.birth,
+              message: this.state.message,
+           })
+          .then((res) => {
+            this.setState({
+                  name: "",
+                  gender: "",
+				          birth: "",
+			            message: "",
+              });
+          })
+          .catch((err) => {});
+    };
+
+  render(){
   return (
     <body>
 
@@ -20,34 +57,59 @@ function Survey() {
       <section class="intro">
       </section>
 
+    <section class="stage">
 
-      <form action="/action_page.php">
+      <form action="/action_page.php" onSubmit={this.handleSubmit}>
+        
+        
         <label for="fname">Nombre del participante:</label>
-          <input type="text" id="fname" name="fname" />
-            
-          <br></br>
+            <input type="text" id="fname" 
+                    placeholder="Nombre"
+                    value={this.state.name} name="name"
+                    onChange={this.handleInput} /> 
+            <br></br>
+
+
+
         <label for="fname">Genero esperado del bebe:</label>
-          <select name="gender">
-              <option value="none" selected>Genero</option>
-              <option value="male">Hombre</option>
-              <option value="female">Mujer</option>
-          </select>
-          <br></br>
+            <select name="gender" 
+                    value={this.state.gender} 
+                    onChange={this.handleInput}>
+                          <option value="none" selected="null">Genero</option>
+                          <option value="M">Hombre</option>
+                          <option value="F">Mujer</option>
+            </select>
+            <br></br>
 
         <label for="fname">Dia de nacimiento esperado para el bebe:</label>
-          <input type="date" id="mayborn" name="mayborn" value="2022-07-05" />
+          <input type="date" id="mayborn" name="birth" 
+                  value={this.state.birth} 
+                  onChange={this.handleInput}/>
           <br></br>
+
+
+
         <label for="fname">Mensaje para los padres:</label>
-          <textarea id="w3review" name="w3review" rows="4" cols="50">
-            Escribe tu mensaje aqui.
+          <textarea id="w3review" name="message"  rows="4" cols="50" 
+                    value={this.state.message} 
+                    onChange={this.handleInput}>
+            Escribe tu mensaje aqui22.
           </textarea>
           
         <br></br>
 
-        <input type="submit" value="Enviar" />
-        <input type="Reset" value="Resetear" />
+        {/* <input type="submit" value="Enviar" /> */}
+        <button type="submit" className="btn btn-primary mb-5">
+            Enviar
+        </button>
+        <button type="Reset" className="btn btn-primary mb-5">
+            Resetear
+        </button>
+        {/* <input type="Reset" value="Resetear" /> */}
 
       </form> 
+
+      </section>
 
 
      
@@ -69,7 +131,7 @@ function Survey() {
 
     </body>
     
-  );
+  );}
 }
 
 export default Survey;
