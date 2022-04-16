@@ -30,6 +30,35 @@ class ReactView(APIView):
             serializer.save()
             return  Response(serializer.data)
         
+
+class Gender_count_View(APIView):
+    
+    def get(self, request):
+        countsG = [
+            {
+                # male count
+                "symbol": "Niños",
+                "amount": Survey.objects.filter(gender = "M").count(),
+                "color": "#0033ad",
+            },
+            {
+                "symbol": "Niñas",
+                "amount": Survey.objects.filter(gender = "F").count(),
+                "color": "#00ffbd",
+            }
+            ,
+            {
+                "symbol": "Insertio",
+                "amount": Survey.objects.filter(gender = "null").count(),
+            }
+        ]
+        return Response(countsG)
+        
+        
+     
+
+
+        
 def survey_with_pivot(request):
     return render(request, 'survey_with_pivot.html', {})
 
