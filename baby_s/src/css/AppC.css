@@ -1,0 +1,21 @@
+.App 
+{
+    text-align: center;
+}
+.AppNav
+{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(62, 62, 62);
+    padding: 0px;
+    margin: 0px;
+}
+
+.ControlB
+{
+    width: 90%;
+    margin-left: 5%;
+    height: 100%;
+    /* padding: 0px;
+    margin: 0px; */
+}

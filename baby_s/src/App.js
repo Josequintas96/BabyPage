@@ -1,4 +1,4 @@
-import './css/App.css';
+import './css/AppC.css';
 import React from "react";
 // import {render} from "react-dom";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -21,22 +21,25 @@ class App extends React.Component
         {
           return (
             <div className="App"> 
+              <section class="AppNav">
+                  
+              </section>
+              
+              <div class='ControlB' >
               <Router>
-                <body  >
-                  hello
-                  <div >  
-                    hello2          
-                      <Routes>
-                          <Route path='/' exact element={<Intro />} />
+                
+                      <Routes >
+                          <Route path='/' exact element={<Intro   />} />
                           <Route exact path="/results" element={<Results/>} />
                           <Route exact path="/survey" element={<Survey />} />
                           <Route exact path="/control" element={<Control />} />
                           <Route exact path='/chart' element={<Chart />} />
                           {/* <Route exact path="/survey" render={(props) => (<Search Input={this.state.search_for} search_F={this.handleSearch} /> )} /> */}
                       </Routes>
-                    </div>  
-                </body>
+                     
+                
               </Router>
+              </div>
             </div>
           );
         }

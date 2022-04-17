@@ -1,0 +1,47 @@
+/* .ControlB
+{
+    width: 60%;
+    margin-left: 20%;
+    height: 100%;
+} */
+
+.block_intro
+{
+    border: 2px solid black;
+    padding:2%;
+    width: 96%;
+    margin-bottom: 15px;
+}
+
+.block_intro p
+{
+    text-align: left;
+    width: 60%;
+}
+
+.link_intro
+{
+    width: 96%;
+    /* padding: 2%; */
+    /* border: 2px solid black; */
+    height: 20%;
+}
+
+.link_intro img {
+    width: 30%;
+    max-height: 100px;
+    height: 70%;
+    width: auto;
+    display: inline-block; 
+
+  }
+
+.link_intro .intro_navigator
+{
+    width: 60%;
+    max-height: 100px;
+    
+    display: inline-block; 
+    text-align: middle;
+    align-items: center;
+}
