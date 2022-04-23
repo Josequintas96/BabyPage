@@ -28,7 +28,7 @@ function Intro() {
       </section >
 
       <section class='link_intro'>
-        <a href='/chart'>
+        <a href='/message'>
           <img src={Message_image}/>
         </a>
         <p class="intro_navigator">

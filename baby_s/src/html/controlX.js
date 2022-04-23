@@ -10,7 +10,6 @@ class Control extends React.Component {
   
     componentDidMount() {
         let data;
-//   http://localhost:8000/wel/
         axios
             .get("http://127.0.0.1:8000/wel/")
             .then((res) => {

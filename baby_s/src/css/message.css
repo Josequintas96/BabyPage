@@ -1,0 +1,41 @@
+.message_hidd
+{
+    width: 80%;
+    height: 50px;
+    border: 2px solid black;
+    margin-left: 10%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.mess_color
+{
+    width: 80%;
+    height: 50px;
+    border: 2px solid black;
+    margin-left: 10%;
+    background-color: aqua;
+}
+
+.mess_color2
+{
+    width: 80%;
+    height: 50px;
+    border: 2px solid black;
+    margin-left: 10%;
+    background-color: red;
+}
+
+.mess_picture
+{
+    /* border: 2px solid green; */
+    /* display: inline-block; */
+    max-width: 90%;
+    max-height: 90%;
+    /* min-height: 70px; */
+    margin-top: 2px;
+    /* vertical-align: top; */
+    position: flex;
+    top: 100%;
+    right: 0%;
+}

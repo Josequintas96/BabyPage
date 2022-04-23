@@ -1,4 +1,4 @@
-import '../css/App.css';
+import '../css/Survey.css';
 import React from "react";
 import axios from 'axios';
 
@@ -6,13 +6,13 @@ class Survey extends React.Component
 {
   state = {
     details: [],
-    user: "",
-    quote: "",
+    error_occur: false,
   };
 
  
     handleInput = (e) => {
       this.setState({
+          // error_occur: false,
           [e.target.name]: e.target.value,
       });
     };
@@ -34,14 +34,19 @@ class Survey extends React.Component
 			            message: "",
               });
           })
-          .catch((err) => {});
+          .catch((err) => {
+            this.setState({
+              error_occur: true,
+            })
+            console.log("ERROR SUPERMAN")
+          });
     };
 
   render(){
   return (
     <body>
 
-      <h1>
+      <h1 calss='Surveyh1'>
         Gaby & Val Cuestonario de su Misteriooso Babe
       </h1>
 
@@ -62,47 +67,61 @@ class Survey extends React.Component
       <form action="/action_page.php" onSubmit={this.handleSubmit}>
         
         
-        <label for="fname">Nombre del participante:</label>
-            <input type="text" id="fname" 
-                    placeholder="Nombre"
-                    value={this.state.name} name="name"
-                    onChange={this.handleInput} /> 
-            <br></br>
+        <label for="fname" class="survey_left">Nombre del participante:</label>
+        <input type="text" id="fname" 
+              placeholder="Nombre"
+              value={this.state.name} name="name"
+              maxlength="30"
+              onChange={this.handleInput} 
+              class= "survey_rigth"/> 
+            <div class="space_div">  </div>
 
 
 
-        <label for="fname">Genero esperado del bebe:</label>
-            <select name="gender" 
-                    value={this.state.gender} 
-                    onChange={this.handleInput}>
-                          <option value="none" selected="null">Genero</option>
-                          <option value="M">Hombre</option>
-                          <option value="F">Mujer</option>
+        <label for="fname" class="survey_left" >Genero esperado del bebe:</label>
+        <select name="gender" 
+                value={this.state.gender} 
+                onChange={this.handleInput}
+                class= "survey_rigth">
+                <option value="none" selected="null">Genero</option>
+                <option value="M">Hombre</option>
+                <option value="F">Mujer</option>
             </select>
-            <br></br>
+            <br />
 
-        <label for="fname">Dia de nacimiento esperado para el bebe:</label>
-          <input type="date" id="mayborn" name="birth" 
+        <label for="fname" class="survey_left" >Dia de nacimiento esperado para el bebe:</label>
+        <input type="date" id="mayborn" name="birth" 
                   value={this.state.birth} 
-                  onChange={this.handleInput}/>
-          <br></br>
+                  onChange={this.handleInput}
+                  class= "survey_rigth"/>
+          <br />
 
 
 
-        <label for="fname">Mensaje para los padres:</label>
+        <label for="fname" class="survey_left">Mensaje para los padres:</label>
           <textarea id="w3review" name="message"  rows="4" cols="50" 
                     value={this.state.message} 
-                    onChange={this.handleInput}>
-            Escribe tu mensaje aqui22.
+                    onChange={this.handleInput}
+                    placeholder="Escribe tu mensaje aqui."
+                    class= "survey_rigth">
+            
           </textarea>
           
-        <br></br>
+      { this.state.error_occur ? 
+        (<div class="survey_error" > Porfavor revisa tus datos; te falta o has escrito 
+        incorectamente uno de los requerimientos </div>)
+        :
+        (<></>)
+      }
+       
+
+       <div class="space_div" >  </div>
 
         {/* <input type="submit" value="Enviar" /> */}
-        <button type="submit" className="btn btn-primary mb-5">
+        <button type="submit" class="survey_bottom">
             Enviar
         </button>
-        <button type="Reset" className="btn btn-primary mb-5">
+        <button type="Reset" class="survey_bottom">
             Resetear
         </button>
         {/* <input type="Reset" value="Resetear" /> */}

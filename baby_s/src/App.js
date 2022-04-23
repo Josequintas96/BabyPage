@@ -11,6 +11,8 @@ import Intro from "./html/Intro";
 import Survey from './html/Survey';
 import Control from './html/controlX';
 import Chart from './html/chart';
+import Message from './html/message';
+import Nav from './Extra/Nav'
 
 //function App() {
 class App extends React.Component
@@ -21,10 +23,11 @@ class App extends React.Component
         {
           return (
             <div className="App"> 
-              <section class="AppNav">
+              {/* <section class="AppNav">
                   
-              </section>
-              
+              </section> */}
+              <Nav />
+
               <div class='ControlB' >
               <Router>
                 
@@ -34,6 +37,7 @@ class App extends React.Component
                           <Route exact path="/survey" element={<Survey />} />
                           <Route exact path="/control" element={<Control />} />
                           <Route exact path='/chart' element={<Chart />} />
+                          <Route exact path='/message' element={<Message />} />
                           {/* <Route exact path="/survey" render={(props) => (<Search Input={this.state.search_for} search_F={this.handleSearch} /> )} /> */}
                       </Routes>
                      

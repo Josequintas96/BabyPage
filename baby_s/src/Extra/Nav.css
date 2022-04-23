@@ -1,0 +1,48 @@
+.Nav
+{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(62, 62, 62);
+    padding: 5px;
+    margin: 0px;
+    /* display: flex;
+     */
+    display: flex;
+    justify-content: start;
+    /* align-items: center */
+}
+
+.NavImg
+{
+    max-width: 90%;
+    max-height: 90%;
+    
+    margin-top: 3px;
+    margin-bottom: 3px;
+    vertical-align: top;
+    margin-left: 7px;
+    margin-right: 7px;
+    /* 
+    display: inline-block; */
+
+}
+
+
+
+
+.NavL
+{
+    display: flex;
+    justify-content: start;
+}
+
+.NavR
+{
+    display: flex;
+    justify-content: end;
+}
+
+.tt
+{
+   
+}
