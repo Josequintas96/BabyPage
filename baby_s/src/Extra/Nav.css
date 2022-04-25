@@ -5,10 +5,8 @@
     background-color: rgb(62, 62, 62);
     padding: 5px;
     margin: 0px;
-    /* display: flex;
-     */
     display: flex;
-    justify-content: start;
+    /* justify-content: start; */
     /* align-items: center */
 }
 
@@ -24,10 +22,7 @@
     margin-right: 7px;
     /* 
     display: inline-block; */
-
 }
-
-
 
 
 .NavL
@@ -39,7 +34,12 @@
 .NavR
 {
     display: flex;
-    justify-content: end;
+    flex-direction: row;
+}
+
+.NavR2
+{
+    
 }
 
 .tt

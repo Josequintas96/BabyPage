@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('wel/', ReactView.as_view(), name="something"),
     path('core/', include('core.urls')),
-    path('count/', Gender_count_View.as_view(), name="count gender")
+    path('count/', Gender_count_View.as_view(), name="count gender"),
+    path('api/v1/users/', include('core.urls')),
 ]

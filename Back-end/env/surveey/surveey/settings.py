@@ -37,9 +37,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
     "rest_framework",
     "core",
     "corsheaders",
+
+    # 3rd Party Apps
+    "rest_framework.authtoken", # new
+    "rest_auth", # new
+    "django.contrib.sites", # new
+    "allauth", # new
+    "allauth.account", # new
+    "allauth.socialaccount", # new
+    "rest_auth.registration", # new
+
 ]
 
 MIDDLEWARE = [
@@ -73,9 +84,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'surveey.wsgi.application'
 
-REST_FRAMEWORK = {'DEFAULT_PERMISSION_CLASSE' : [ 'rest_framework.permissions.AllowAny']}
+REST_FRAMEWORK = {'DEFAULT_PERMISSION_CLASSE' : [ 'rest_framework.permissions.AllowAny'],
+                  'DATETIME_FORMAT': "%m/%d/%Y %I:%M%P",
+                  'DEFAULT_AUTHENTICATION_CLASSES': ['rest_framework.authentication.TokenAuthentication',],
+                  }
 
 CORS_ORIGIN_ALLOW_ALL = True
+
 
 
 # Database
@@ -129,3 +144,24 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# add to control user
+AUTH_USER_MODEL = 'core.UserControl'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+AUTHENTICATION_BACKENDS = (    "django.contrib.auth.backends.ModelBackend",    "allauth.account.auth_backends.AuthenticationBackend", )
+
+SITE_ID = 1 
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_SESSION_REMEMBER = True
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_UNIQUE_EMAIL = True
+
+
+
+
+
