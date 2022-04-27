@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+import os # new
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-w)wto($4q+jkmo6ivb@xz8t23&25em#2@^gcdq&gbg77r9gl3e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', 'gaby-val-future2022.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -62,6 +62,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    
+    # new heroku
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
+
 ]
 
 ROOT_URLCONF = 'surveey.urls'
@@ -98,10 +103,18 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'de3sve7l93en5r',
+        'HOST': 'ec2-3-211-6-217.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'hvpbhahoinfzyv',
+        'PASSWORD': '506a95c7a9c2945638cf26fb22c183b330e7610deac7f0878fb917bc69f7ab35',  
+        
     }
 }
+
 
 
 # Password validation
@@ -138,7 +151,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+# STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -162,6 +175,25 @@ ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_UNIQUE_EMAIL = True
 
 
+
+#add for deployment
+# Option 1
+CORS_ORIGIN_WHITELIST = [
+    'https://localhost:3000',
+]
+
+# Configure Django App for Heroku.
+# import import django_heroku
+# django_heroku.settings(locals())
+# django_heroku.settings(locals())
+
+# Option 2
+# CORS_ORIGIN_ALLOW_ALL = True already created
+
+# #Heerroku css
+
+STATIC_URL = '/static/'
+STATIC_ROOT =  STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 

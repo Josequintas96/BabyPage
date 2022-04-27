@@ -17,11 +17,17 @@ from django.contrib import admin
 from django.urls import path, include, re_path
 # from django.conf.urls import url
 from core.views import *
+# from django.conf.urls.static import static
+
   
 urlpatterns = [
+    path('', ReactView.as_view(), name="something"),
+    path('/', ReactView.as_view(), name="something"),
     path('admin/', admin.site.urls),
     path('wel/', ReactView.as_view(), name="something"),
     path('core/', include('core.urls')),
     path('count/', Gender_count_View.as_view(), name="count gender"),
     path('api/v1/users/', include('core.urls')),
-]
+    
+] 
+# + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
