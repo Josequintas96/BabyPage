@@ -6,6 +6,10 @@
     margin-left: 10%;
     margin-top: 25px;
     margin-bottom: 25px;
+    background-color: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
 
 .mess_color
@@ -28,14 +32,28 @@
 
 .mess_picture
 {
-    /* border: 2px solid green; */
     /* display: inline-block; */
+    display: flex;
     max-width: 90%;
     max-height: 90%;
-    /* min-height: 70px; */
     margin-top: 2px;
-    /* vertical-align: top; */
-    position: flex;
     top: 100%;
-    right: 0%;
+    /* right: 0%; */
 }
+
+
+
+.title_mess
+{
+    display: flex;
+    vertical-align: top;
+    padding-left: 12px;
+    margin-right: 12px;
+    width: 25%;
+}
+
+@media only screen and (max-width: 767px) {
+    .title_mess {
+        width: 50%;
+    }
+  }

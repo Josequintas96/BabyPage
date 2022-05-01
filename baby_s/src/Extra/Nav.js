@@ -47,11 +47,13 @@ const Nav = () => {
                    (<Link to="/" class="NavR2" > 
                     <img src={Wedding} class="NavImg" />
                   </Link>):
-                  (<></>)} 
-              
-                  <Link to="/" class="NavR2" >
+                  (<>
+                    <Link to="/" class="NavR2" >
                       <img src={baby} class="NavImg"  />
-                  </Link>
+                    </Link>
+                  </>)} 
+              
+                  
               </div>
 
 

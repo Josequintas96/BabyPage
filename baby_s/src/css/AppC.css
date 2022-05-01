@@ -1,7 +1,24 @@
 .App 
 {
     text-align: center;
+    /* background-color: aqua; */
+    background-image: url("../image/background/Babycontrol1.png") ;
+    /* background-size: contain; */
+    /* background-size: cover; */
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:100%;
+    min-height: 900px;   
 }
+
+@media only screen and (max-width: 767px) {
+    .App {
+        background: url("../image/background/Babycontrol1.png") ;
+    }
+  }
+  
+
 .AppNav
 {
     width: 100%;
@@ -13,9 +30,11 @@
 
 .ControlB
 {
-    width: 90%;
-    margin-left: 5%;
+    width: 100%;
+    /* margin-left: 5%; */
     height: 100%;
+    
+    
     /* padding: 0px;
     margin: 0px; */
 }

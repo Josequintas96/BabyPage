@@ -23,7 +23,8 @@ function ChartA ()
 
     useEffect(async () => {
         const result = await axios(
-            "http://127.0.0.1:8000/count/",
+            // "http://127.0.0.1:8000/count/",
+            "https://gaby-val-future2022.herokuapp.com/count/"
             );
 
             setData(result.data);
@@ -60,7 +61,7 @@ function ChartA ()
                         pieValue={(data) => data.amount}
                         outerRadius={this.state.half}
                         innerRadius={({ data }) => {
-                        const size = this.state.active && this.state.active.symbol == data.symbol ? 40 : 30;
+                        const size = this.state.active && this.state.active.symbol === data.symbol ? 40 : 30;
                         return this.state.half - size;
                         }}
                         padAngle={0.01}

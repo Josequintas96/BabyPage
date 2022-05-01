@@ -20,7 +20,8 @@ class SurveyA extends React.Component
     handleSubmit = (e) => {
       e.preventDefault();
       axios
-        .post("http://localhost:8000/wel/", {
+        // .post("http://localhost:8000/wel/", {
+          .post("https://gaby-val-future2022.herokuapp.com/wel/", { 
               name: this.state.name,
 			        gender: this.state.gender,
 			        birth: this.state.birth,
@@ -44,7 +45,7 @@ class SurveyA extends React.Component
 
   render(){
   return (
-    <body>
+    <body class="controlBb">
 
       <h1 calss='Surveyh1'>
         Gaby & Val Cuestonario de su Misteriooso Babe

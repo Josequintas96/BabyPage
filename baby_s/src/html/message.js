@@ -2,6 +2,7 @@ import '../css/message.css';
 import React from "react";
 import Chart from "./chart";
 import Result from "./Results";
+import Standart_p from './standart_p'
 
 import A_DOWN from "../image/A-DOWN.png";
 import A_UP from "../image/A-UP.png";
@@ -14,6 +15,7 @@ class Messsage extends React.Component
     state = {
         isHiddenGender: false,
         isHiddenMessage: false,
+        user: '',
         }
 
     gender_twist(){
@@ -30,6 +32,15 @@ class Messsage extends React.Component
               })
         }
     }
+
+    componentDidMount() {
+        if (localStorage.getItem('token') !== null);
+        {
+            const rememberMe = localStorage.getItem('token');
+            this.setState({ user: rememberMe });
+        }
+        
+      }
 
     message_twist(){
         if (this.state.isHiddenMessage)
@@ -57,25 +68,35 @@ class Messsage extends React.Component
 
     render(){
         return (
-            <body >
+            <body class="controlBB">
 
             <h1>
-                Gaby & Val Cuestonario de Nuestro Futuro Babe  Message board
+                Tablero de Mensajes
             </h1>
 
             <section class='block_intro'>
-                <p >
-                Gracias por participar en esta
-                maravillosa experiencia;
-                Como prueba de su participacion, 
-                aqui estan los resultados de
-                su participacion.
-                </p>
+                {this.state.user ===null?
+                    (<p >
+                        Gracias por participar en esta
+                        maravillosa experiencia;
+                        Como prueba de su participacion, 
+                        aqui estan los resultados de
+                        su participacion.
+                        </p>)
+                    :
+                    (<p >
+                        Aqui estaan los participantes y sus deseas a tu persona; 
+                        espero que sus mensajes te lleguen sano y salvo y te deseeen prosperidad.
+                        </p>)
+                    }
+                
             </section >
 
+            <section class="intro"></section>
 
             {/* <button onclick={this.myFunction()}>Click Me</button> */}
             <div class="message_hidd">
+                <h2 class="title_mess"> Resultados</h2>
                     {this.state.isHiddenGender?
                         (<img src={A_DOWN} class="mess_picture" onClick={() => this.gender_twist()}/>)
                         :
@@ -89,10 +110,17 @@ class Messsage extends React.Component
                 (<></>)
             }
 
+            <section class="intro"></section>
              
             {/* <Chart  /> */}
             
             <div class="message_hidd">
+                    {this.state.user ===null?
+                    (<h2 class="title_mess">Participantes</h2>)
+                    :
+                    (<h2 class="title_mess">Mensajes</h2>)
+                    }
+                    
                     {this.state.isHiddenMessage?
                         (<img src={A_DOWN} class="mess_picture" onClick={() => this.message_twist()}/>)
                         :
@@ -100,13 +128,30 @@ class Messsage extends React.Component
                     } 
             </div>
 
-            {this.state.isHiddenMessage?
-                (<Result/>)
+            
+            {this.state.user ===null?
+                (<>
+                    {this.state.isHiddenMessage?
+                    (<Standart_p />)
+                    :
+                    (<></>)
+                    } 
+                </> )
                 :
-                (<></>)
-            } 
+                (<>
+                    {this.state.isHiddenMessage?
+                    (<Result/>)
+                    :
+                    (<></>)
+                    } 
+                </>)}
+            
             {/* <Result/> */}
 
+            
+            <section class="intro"></section>
+
+            <br class="space_div"/>
 
             <footer class="footer">
 

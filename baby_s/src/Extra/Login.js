@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Navbar from './Nav2'
+import "../ExtraCss/login.css"
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -8,7 +10,9 @@ const Login = () => {
 
   useEffect(() => {
     if (localStorage.getItem('token') !== null) {
-      window.location.replace('http://localhost:3000/dashboard');
+      // window.location.replace('http://localhost:3000/');
+      window.location.replace('/');
+      // window.location.replace("https://gaby-val-future2022.herokuapp.com/dashoboard")
     } else {
       setLoading(false);
     }
@@ -22,7 +26,8 @@ const Login = () => {
       password: password
     };
 
-    fetch('http://127.0.0.1:8000/api/v1/users/auth/login/', {
+    // fetch('http://127.0.0.1:8000/api/v1/users/auth/login/', {
+    fetch("https://gaby-val-future2022.herokuapp.com/api/v1/users/auth/login/", {  
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -34,7 +39,9 @@ const Login = () => {
         if (data.key) {
           localStorage.clear();
           localStorage.setItem('token', data.key);
-          window.location.replace('http://localhost:3000/dashboard');
+          window.location.replace('/');
+          // window.location.replace('http://localhost:3000/');
+          // window.location.replace("https://gaby-val-future2022.herokuapp.com/dashboard");
         } else {
           setEmail('');
           setPassword('');
@@ -46,11 +53,15 @@ const Login = () => {
 
   return (
     <div>
-      {loading === false && <h1>Login</h1>}
-      {errors === true && <h2>Cannot log in with provided credentials</h2>}
+      <div class="login_box">
+      {/* <Navbar/> */}
+      {loading === false && <h1>Iniciar sesión</h1>}
+      {errors === true && <section class="error_log"><h2 class="error_text">Cannot log in with provided credentials</h2></section>}
       {loading === false && (
         <form onSubmit={onSubmit}>
-          <label htmlFor='email'>Email address:</label> <br />
+          {/* <br /> */}
+          <label htmlFor='email'>Correo electronico:</label>
+          <br />
           <input
             name='email'
             type='email'
@@ -58,19 +69,25 @@ const Login = () => {
             required
             onChange={e => setEmail(e.target.value)}
           />{' '}
+
+          <br class="login_space"/>
+
+          <label htmlFor='password'>Contraseña:</label> 
           <br />
-          <label htmlFor='password'>Password:</label> <br />
-          <input
-            name='password'
-            type='password'
-            value={password}
-            required
-            onChange={e => setPassword(e.target.value)}
-          />{' '}
-          <br />
-          <input type='submit' value='Login' />
+              <input
+                name='password'
+                type='password'
+                value={password}
+                required
+                onChange={e => setPassword(e.target.value)}
+              />{' '}
+
+          <br class="login_space" />
+          <input type='submit' value='Ingresar' 
+              class="button-24"/>
         </form>
       )}
+      </div>
     </div>
   );
 };

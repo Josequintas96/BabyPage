@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from unicodedata import name
+from django.shortcuts import redirect, render
 from rest_framework.views import APIView
+from rest_framework.decorators import api_view
 
 
 from rest_framework.generics import ListAPIView
@@ -9,7 +11,6 @@ from rest_framework.response import Response
 from .serializer import *
 
 from django.http import JsonResponse
-from django.shortcuts import render
 # from core.models import Order
 from django.core import serializers
 # Create your views here.
@@ -33,6 +34,35 @@ class ReactView(APIView):
         if serializer.is_valid(raise_exception=True):
             serializer.save()
             return  Response(serializer.data)
+    
+    # @api_view(["DELETE"])
+    def delete(self, request):
+        if request.method == "DELETE":
+            val = request.data.get("user_name");
+            objEE = Survey.objects.filter(name = val);
+            if objEE:
+                objEE.delete()
+                # return Response({'status': 'OK'},"File being erase")
+                return Response("Database erase, thank for work")
+            # return Response("No file, no possible erasure")
+            # handler400 = 'rest_framework.exceptions.bad_request'
+            handler400 = {
+                                "status_code" : 404,
+                                "error" : "The resource was not found!!",
+                                "value": val,
+                                "value2": request.data,
+                            }
+            return Response(handler400)
+        handler400 = {
+                                "status_code" : 404,
+                                "error" : "The resource is not DELETE"
+                            }
+        return Response(handler400)
+        # Response(status='HTTP_404_NOT_FOUND', data=error)
+        
+
+    
+        
         
 
 class Gender_count_View(APIView):
@@ -54,14 +84,17 @@ class Gender_count_View(APIView):
             {
                 "symbol": "Insertio",
                 "amount": Survey.objects.filter(gender = "null").count(),
+                "color": "#000000",
             }
         ]
         return Response(countsG)
         
         
      
-
-
+# def delete_event(request,  survey_name):
+#     objEE = Survey.objects.get(name=survey_name),
+#     objEE.delete()
+#     return redirect('wel')
         
 def survey_with_pivot(request):
     return render(request, 'survey_with_pivot.html', {})

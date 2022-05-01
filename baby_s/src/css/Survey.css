@@ -20,8 +20,9 @@ body {
   
   .stage
   {
-    border: 5px solid black;
-    background: rgb(96, 108, 221);
+    border: 5px  black;
+    background: rgb(152, 158, 214);
+    border-radius: 50px;
     min-height: 300px;
     width:90%;
     padding: 15px;
@@ -48,8 +49,7 @@ body {
 
   .space_div
   {
-    width: 100px;
-    background-color: red;
+    margin-bottom: 10px;
   }
 
   .survey_left
@@ -70,7 +70,7 @@ body {
     height: 20%;
     text-align: left;
     vertical-align: top;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   section>p+img
@@ -101,7 +101,8 @@ body {
     width: 75px;
     height: 25px;
     display: inline-block;
-    margin: 5px;
+    margin-right: 15px;
+    margin-left: 15px;
   }
 
   .survey_error
@@ -129,3 +130,13 @@ body {
     width:  47%;
     text-align: left;
   } */
+
+.stageF
+{
+    border: 5px  black;
+    background: rgb(152, 158, 214);
+    border-radius: 50px;
+    width:90%;
+    padding: 15px;
+    display: inline-block; 
+}

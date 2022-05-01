@@ -11,7 +11,8 @@ class Control extends React.Component {
     componentDidMount() {
         let data;
         axios
-            .get("http://127.0.0.1:8000/wel/")
+            // .get("http://127.0.0.1:8000/wel/")
+            .get("https://gaby-val-future2022.herokuapp.com/wel/")
             .then((res) => {
                 data = res.data;
                 this.setState({

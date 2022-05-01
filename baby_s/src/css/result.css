@@ -1,77 +1,100 @@
+.controlBS
+{
+    width: 100%;
+    /* margin-left: 2%; */
+    height: 100%;
+    background-color: transparent;
+}
+
+
 .message_p
 {
     border: 2px solid black;
     margin-bottom: 12px;
     width: 60%;
-    /* max-height: 100px; */
-    /* height: 70%; */
-    /* width: auto; */
+    border-radius: 15px;
     display: inline-block; 
-    max-height: 600px;
+    max-height: 1000px;
     min-height: 120px;
+    background: white;
+
+    padding-right: 12px;
+}
+
+.participant_p
+{
+    border: 2px solid black;
+    margin-bottom: 12px;
+    width: 50%;
+    border-radius: 50%;
+    display: inline-block; 
+    max-height: 1000px;
+    min-height: 120px;
+    background: white;
+
+    padding-right: 12px;
+}
+
+.message_control
+{
+    /* display:flex; */
     
-    /* padding-bottom: 3px; */
 }
 
 .message_name
 {
-    border: 2px solid red;
-    /* border-right: 2px solid black; */
+    /* flex: 1; */
     display: inline-block;
-    width: 30%;
+    min-height: 100%;
     height: 100%;
-    text-align: left;
-    /* min-height: 70px; */
+    width: 40%;
+    /* background: red; */
     vertical-align: top;
-    /* margin-bottom: 3px; */
-    /* margin-right: 3px; */
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
-    
+    align-items: stretch;
+    justify-content: space-around;
+
+    /* padding-top: 25%; */
+
 }
 
 .message_body
 {
-    /* border: 2px solid rgb(113, 80, 80); */
-    width: 60%;
-    height: 100%;
     display: inline-block;
+    border-left: solid black 7px;
+    flex:1;
+    width: 58%;
+    
 }
 
-.message_message
-{
-    /* border: 2px solid green; */
-    width: 100%;
-    height: 45%;
-    display: inline-block;
-    min-height: 30px;
-
-    text-align: center;
-    padding-top: 3px;
-    /* vertical-align: middle */
-}
 .message_gender
 {
-    /* border: 2px solid blue; */
     display: inline-block;
     width: 100%;
     height: 45%;
     min-height: 70px;
     vertical-align: top;
     margin-bottom: 3px;
+    /* background-color: aqua; */
+    border-bottom: solid black 7px;
+
+}
+.message_gg
+{
+    display: inline-block;
+    padding-top: 20px;
+    margin-right: 15px;
 }
 .message_picture
 {
-    /* border: 2px solid green; */
     display: inline-block;
     max-width: 15%;
     max-height: 15%;
-    /* min-height: 70px; */
     margin-top: 4px;
     vertical-align: top;
+    border: 5px red solid;
+    padding: 5px;
+    border-radius: 50%;
 }
-
 
 .message_expected
 {
@@ -80,7 +103,117 @@
     text-align: center;
 }
 
+
+.message_message
+{
+    width: 100%;
+    height: 45%;
+    display: inline-block;
+    min-height: 30px;
+    text-align: center;
+    padding: 8px;
+}
+
+
 .bg-primary{
     color: red;
 
+} 
+
+.bg-secondary{
+    color: blue;
+
+} 
+
+.bg-success{
+    color: green;
+
+} 
+
+.bg-danger{
+    color: rgb(146, 146, 62);
+} 
+
+.bg-warning{
+    color: rgb(126, 4, 131);
 }
+
+.bg-info{
+    color: black;
+} 
+
+
+.input_r[type=text] {
+    width: 150px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('../image/search.png') ;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    background-size: 25px 50%;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+    margin-bottom: 15px;
+  }
+  
+  .input_r[type=text]:focus {
+    width: 50%;
+  }
+
+
+
+@media only screen and (max-width: 767px) {
+    div.message_p
+    {
+        padding-right: 0px;
+    }
+    section.message_name{
+            border-radius: 13px;
+            display: inline-block;
+            min-height: 100%;
+            height: 100%;
+            width: 100%;
+            background: red;
+            vertical-align: top;
+            border-bottom: solid black 7px;
+    }
+
+    section.message_body
+    {
+        display: inline-block;
+        border-left: none;
+        width: 100%;
+        /* background: aqua; */
+    }
+
+    .message_gg
+    {
+        display: inline-block;
+        padding-top: 10px;
+        margin-right: 15px;
+    }
+
+    .message_picture
+    {
+        border: 3px red solid;
+        padding: 5px;
+        border-radius: 50%;
+    }
+
+    .message_message
+    {
+        width: 95%;
+        height: 45%;
+        /* display: inline-block; */
+        /* min-height: 30px; */
+        text-align: left;
+        padding: 8px;
+        /* margin-right: 15px; */
+        /* background: aqua; */
+    }
+
+
+  }

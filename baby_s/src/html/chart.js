@@ -4,6 +4,7 @@ import { Group } from "@visx/group";
 import { Text } from "@visx/text";
 import React from "react";
 import axios from 'axios';
+import "../css/chart.css"
 
 const WIDTH = 400;
 var coins = [
@@ -27,7 +28,8 @@ class Chart extends React.Component
         let data;
 //   http://localhost:8000/wel/
         axios
-            .get("http://127.0.0.1:8000/count/")
+            // .get("http://127.0.0.1:8000/count/")
+            .get("https://gaby-val-future2022.herokuapp.com/count/")
             .then((res) => {
                 data = res.data;
                 console.log("THIS IS COUNT: ", res.data)
@@ -42,7 +44,7 @@ class Chart extends React.Component
         const totalg=
         (this.state.gender.reduce((totalg,currentItem) =>  totalg = totalg + currentItem.amount , 0 ));
             return (
-                <main>
+                <main class="controlBC">
                     {console.log("Special count",  this.state.gender)}
                     {console.log("SS count: ", totalg)}
                     

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "../ExtraCss/login.css"
 
-const Signup = () => {
+const New_user = () => {
   const [email, setEmail] = useState('');
   const [password1, setPassword1] = useState('');
   const [password2, setPassword2] = useState('');
@@ -9,8 +9,8 @@ const Signup = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (localStorage.getItem('token') !== null) {
-      window.location.replace('http://localhost:3000/dashboard');
+    if (localStorage.getItem('token') === null) {
+      window.location.replace('/');
     } else {
       setLoading(false);
     }
@@ -37,8 +37,8 @@ const Signup = () => {
       .then(res => res.json())
       .then(data => {
         if (data.key) {
-          localStorage.clear();
-          localStorage.setItem('token', data.key);
+          // localStorage.clear();
+          // localStorage.setItem('token', data.key);
           window.location.replace('/');
         } else {
           setEmail('');
@@ -53,10 +53,10 @@ const Signup = () => {
   return (
     <div>
       <div class="login_box">
-          {loading === false && <h1>Signup</h1>}
-          {errors === true && <section class="error_log"> <h2 class="error_text" > Cannot signup with provided credentials </h2> </section>}
+          {loading === false && <h1>Nuevo Usuario</h1>}
+          {errors === true && <section class="error_log"> <h2 class="error_text" > No puede ingresar con la clave dada </h2> </section>}
           <form onSubmit={onSubmit}>
-            <label htmlFor='email'>Email address:</label> <br />
+            <label htmlFor='email'>Correo electronico:</label> <br />
             <input
               name='email'
               type='email'
@@ -66,7 +66,7 @@ const Signup = () => {
             />{' '}
 
             <br class="login_space" />
-            <label htmlFor='password1'>Password:</label> <br />
+            <label htmlFor='password1'>Contraseña:</label> <br />
             <input
               name='password1'
               type='password'
@@ -76,7 +76,7 @@ const Signup = () => {
             />{' '}
 
             <br class="login_space"/>
-            <label htmlFor='password2'>Confirm password:</label> <br />
+            <label htmlFor='password2'>Confirmar Contraseña:</label> <br />
             <input
               name='password2'
               type='password'
@@ -86,13 +86,14 @@ const Signup = () => {
             />{' '}
             
             <br class="login_space" />
-            <input type='submit' value='Signup' />
+            <input type='submit' value='Nuevo Usuario'
+              class="button-24" />
           </form>
       </div>
     </div>
   );
 };
 
-export default Signup;
+export default New_user;
 
 

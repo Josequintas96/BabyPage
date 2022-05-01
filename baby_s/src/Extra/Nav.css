@@ -39,10 +39,67 @@
 
 .NavR2
 {
-    
+    min-width: 90%;
+    min-height: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.tt
+.Timer
 {
+   border: 30px groove black;
+   border-radius: 25%;
+   width:80%;
+   height: 100%;
+   margin-left: 10%;
+   background-color: rgba(71, 71, 90, 0.5);
    
+}
+
+.Timer_title
+{
+    font-family: "Fantasy";
+    font-size: 45px;
+}
+
+.Timer_control0
+{
+    display: inline-block;
+    /* width: 45%; */
+    padding-left: 15px;
+    font-family: "Fantasy";
+    color: rgb(0, 0, 0);
+    font-size: 60px;
+    margin-bottom: 0px;
+}
+
+.Timer_control1
+{
+    display: inline-block;
+    /* width: 45%; */
+    padding-left: 15px;
+    font-family: "Fantasy";
+    color: rgb(0, 0, 0);
+    font-size: 60px;
+    margin-bottom: 0px;
+}
+
+.Timer_control2
+{
+    display: inline-block;
+    /* width: 45%; */
+    padding-left: 15px;
+    font-family: "Fantasy";
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+}
+
+.Timer_control3
+{
+    display: inline-block;
+    /* width: 45%; */
+    padding-left: 15px;
+    font-family: "Fantasy";
+    color: rgb(0, 0, 0);
+    font-size: 30px;
 }

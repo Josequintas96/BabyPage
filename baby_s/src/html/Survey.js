@@ -20,7 +20,8 @@ class Survey extends React.Component
     handleSubmit = (e) => {
       e.preventDefault();
       axios
-        .post("http://localhost:8000/wel/", {
+        // .post("http://localhost:8000/wel/", {
+        .post("https://gaby-val-future2022.herokuapp.com/wel/", { 
               name: this.state.name,
 			        gender: this.state.gender,
 			        birth: this.state.birth,
@@ -44,10 +45,10 @@ class Survey extends React.Component
 
   render(){
   return (
-    <body>
+    <body class="controlBB">
 
       <h1 calss='Surveyh1'>
-        Gaby & Val Cuestonario de su Misteriooso Babe
+        Gaby & Val Cuestonario de su Misteriooso Bebe
       </h1>
 
       <section class="stage">
@@ -64,36 +65,48 @@ class Survey extends React.Component
 
     <section class="stage">
 
+      <br class="space_div"/>
       <form action="/action_page.php" onSubmit={this.handleSubmit}>
         
         
         <label for="fname" class="survey_left">Nombre del participante:</label>
-        <input type="text" id="fname" 
-              placeholder="Nombre"
-              value={this.state.name} name="name"
-              maxlength="30"
-              onChange={this.handleInput} 
-              class= "survey_rigth"/> 
-            <div class="space_div">  </div>
+        <div class= "survey_rigth">
+          <input type="text" id="fname" 
+                placeholder="Nombre"
+                value={this.state.name} name="name"
+                maxlength="30"
+                onChange={this.handleInput} 
+                class= "survey_rigth"/> 
+        </div>
+        
+
+        <br class="space_div"/>
 
 
 
         <label for="fname" class="survey_left" >Genero esperado del bebe:</label>
-        <select name="gender" 
-                value={this.state.gender} 
-                onChange={this.handleInput}
-                class= "survey_rigth">
-                <option value="none" selected="null">Genero</option>
-                <option value="M">Hombre</option>
-                <option value="F">Mujer</option>
-            </select>
-            <br />
+        <div class= "survey_rigth">
+          <select name="gender" 
+                  value={this.state.gender} 
+                  onChange={this.handleInput}
+                  class= "survey_rigth">
+                  <option value="none" selected="null">Genero</option>
+                  <option value="M">Hombre</option>
+                  <option value="F">Mujer</option>
+              </select>
+
+        </div>
+        
+        <br />
 
         <label for="fname" class="survey_left" >Dia de nacimiento esperado para el bebe:</label>
-        <input type="date" id="mayborn" name="birth" 
+        <div class= "survey_rigth">
+            <input type="date" id="mayborn" name="birth" 
                   value={this.state.birth} 
                   onChange={this.handleInput}
+                  min="2022-05-01"
                   class= "survey_rigth"/>
+        </div>
           <br />
 
 
@@ -128,6 +141,7 @@ class Survey extends React.Component
 
       </form> 
 
+      <br class="space_div"/>
       </section>
 
 
@@ -139,7 +153,7 @@ class Survey extends React.Component
       <section>
           {/* <img  src= "https://global-uploads.webflow.com/61832088cc97eb577fc81c35/61832088cc97eb139cc8201d_61516ba9589fb6822bd4a7c9_thankyou__FillWzcwMCw0NDBd.jpeg"
         style="width:350px;height:200px;" /> */}
-        hello
+        
       </section>
 
 

@@ -10,7 +10,7 @@ GENDER_C = (
   
   
 class Survey(models.Model):
-    name = models.CharField(max_length=30)
+    name = models.CharField(max_length=30, unique=True)
     gender =  models.CharField(
         max_length = 20,
         choices = GENDER_C,
