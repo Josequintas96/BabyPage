@@ -78,7 +78,6 @@ class Gender_count_View(APIView):
             {
                 "symbol": "Niñas",
                 "amount": Survey.objects.filter(gender = "F").count(),
-                # "color": "#00ffbd",
                 "color": "#ff00c2",
             }
             ,
