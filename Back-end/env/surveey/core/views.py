@@ -58,7 +58,6 @@ class ReactView(APIView):
                                 "error" : "The resource is not DELETE"
                             }
         return Response(handler400)
-        # Response(status='HTTP_404_NOT_FOUND', data=error)
         
 
     
@@ -89,17 +88,4 @@ class Gender_count_View(APIView):
         ]
         return Response(countsG)
         
-        
-     
-# def delete_event(request,  survey_name):
-#     objEE = Survey.objects.get(name=survey_name),
-#     objEE.delete()
-#     return redirect('wel')
-        
-def survey_with_pivot(request):
-    return render(request, 'survey_with_pivot.html', {})
-
-def pivot_data(request):
-    dataset = Survey.objects.all()
-    data = serializers.serialize('json', dataset)
-    return JsonResponse(data, safe=False)
+          
