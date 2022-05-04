@@ -7,7 +7,7 @@ const Logout = () => {
 
   useEffect(() => {
     if (localStorage.getItem('token') == null) {
-      window.location.replace('http://localhost:3000/login');
+      window.location.replace('/login');
     } else {
       setLoading(false);
     }
@@ -29,13 +29,13 @@ const Logout = () => {
       .then(data => {
         console.log(data);
         localStorage.clear();
-        window.location.replace('http://localhost:3000/login');
+        window.location.replace('/login');
       });
   };
 
   const handleLogout2 = e => {
     e.preventDefault();    
-    window.location.replace('http://localhost:3000/');
+    window.location.replace('/');
 
   };
 

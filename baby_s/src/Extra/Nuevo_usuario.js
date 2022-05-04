@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import "../ExtraCss/login.css"
 
 const New_user = () => {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [password1, setPassword1] = useState('');
   const [password2, setPassword2] = useState('');
   const [errors, setErrors] = useState(false);
@@ -20,10 +22,19 @@ const New_user = () => {
     e.preventDefault();
 
     const user = {
+      name: name,
       email: email,
+      password : password1,
       password1: password1,
       password2: password2
     };
+    // {
+    //   name: name,
+    //   email: email,
+    //   password : password1,
+    //   password1: password1,
+    //   password2: password2
+    // }
 
     // fetch('http://127.0.0.1:8000/api/v1/users/auth/register/', {
     fetch('https://gaby-val-future2022.herokuapp.com/api/v1/users/auth/register/', {
@@ -32,7 +43,8 @@ const New_user = () => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(user)
+      body: (user),
+      
     })
       .then(res => res.json())
       .then(data => {
@@ -56,6 +68,18 @@ const New_user = () => {
           {loading === false && <h1>Nuevo Usuario</h1>}
           {errors === true && <section class="error_log"> <h2 class="error_text" > No puede ingresar con la clave dada </h2> </section>}
           <form onSubmit={onSubmit}>
+            <label htmlFor='name'>Nombre:</label> <br />
+            <input
+              name='name'
+              type='text'
+              value={name}
+              onChange={e => setName(e.target.value)}
+              required
+            />{' '}
+
+            <br class="login_space" />
+
+
             <label htmlFor='email'>Correo electronico:</label> <br />
             <input
               name='email'

@@ -6,15 +6,11 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 
 //image
-import Ven from "../image/venezuela.png";
-import France from "../image/france.png";
-import Wedding from "../image/wedding.png";
-import baby from "../image/baby.png";
 import { Link } from 'react-router-dom';
 
 const calculateTimeLeft = () => {
     let year = new Date().getFullYear();
-    let difference = +new Date(`06/05/${year}`) - +new Date();
+    let difference = +new Date(`07/05/${year}`) - +new Date();
   
     let timeLeft = {};
   

@@ -84,6 +84,15 @@ class Eraser extends React.Component
         Borrador de Mensajes
       </h1>
 
+      <section class='block_intro'>
+                <p >
+                    Si deseas borrar algun mensajee no deseado, 
+                    busca el mensaje, escribe el nombre en la parte 
+                    inferior y presiona eliminar.
+                </p>
+                
+            </section >
+
 
     <section class="intro"></section>
 
@@ -141,10 +150,12 @@ class Eraser extends React.Component
        <div class="space_div" >  </div>
 
         {/* <input type="submit" value="Enviar" /> */}
-        <button type="submit" class="survey_bottom">
+        {/* <button type="submit" class="survey_bottom"> */}
+        <button type="submit" class="button-25">
             Borrar
         </button>
-        <button type="Reset" class="survey_bottom">
+        {/* <button type="Reset" class="survey_bottom"> */}
+        <button type="Reset" class="button-25">
             Resetear
         </button>
         {/* <input type="Reset" value="Resetear" /> */}

@@ -56,7 +56,7 @@ const Login = () => {
       <div class="login_box">
       {/* <Navbar/> */}
       {loading === false && <h1>Iniciar sesión</h1>}
-      {errors === true && <section class="error_log"><h2 class="error_text">Cannot log in with provided credentials</h2></section>}
+      {errors === true && <section class="error_log"><h2 class="error_text">La información dadá no es correcta</h2></section>}
       {loading === false && (
         <form onSubmit={onSubmit}>
           {/* <br /> */}

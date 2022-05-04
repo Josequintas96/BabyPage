@@ -48,9 +48,9 @@ function Intro_F() {
                     <a href='/message'>
                         <img src={Message_image} class="intro_imgFF"/>
                     </a>
-                    <h2>
+                    <p>
                         Resultados
-                    </h2>
+                    </p>
                 </div>
 
                 <div class="intro_resF">

@@ -20,7 +20,7 @@ function Intro() {
           Ha sido una larga espera de nueve meses;
           enfrentamos difiicultades en este periodo
           de tiempo, pero ninguna de la cual nos haga 
-          arrepentirr de la decision que hemos tomado; 
+          arrepentir de la decision que hemos tomado; 
           hicimos preciadas memorias en estos nueve meses; 
           y muchas mas preciadas memorias haremos con la
           nueva adicion a la familia.

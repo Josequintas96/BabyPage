@@ -2,6 +2,8 @@ import '../css/Survey.css';
 import React from "react";
 import axios from 'axios';
 
+import Gaby_belly from "../image/gaby_photo/gaby_pregnant2.jpeg";
+
 class Survey extends React.Component
 {
   state = {
@@ -53,10 +55,13 @@ class Survey extends React.Component
 
       <section class="stage">
           <p>
-            Bienvenidos a la celebracion de nuestro futuro bebe; agradecemos su participacion en este evento tan importane para nosotros. Porfavor respondan el cuestonario debajo para escuchar sus opiniones.
+            Bienvenidos a la celebracion de nuestro futuro bebe; 
+            agradecemos su participacion en este evento tan importane 
+            para nosotros. Porfavor respondan el cuestonario debajo para 
+            escuchar sus opiniones.
           </p>
 
-          <img src = "https://images.unsplash.com/photo-1617331140180-e8262094733a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80" />
+          <img src ={Gaby_belly} />
 
       </section>
 
@@ -84,7 +89,7 @@ class Survey extends React.Component
 
 
 
-        <label for="fname" class="survey_left" >Genero esperado del bebe:</label>
+        <label for="fname" class="survey_left" >Género:</label>
         <div class= "survey_rigth">
           <select name="gender" 
                   value={this.state.gender} 
@@ -105,7 +110,7 @@ class Survey extends React.Component
                   value={this.state.birth} 
                   onChange={this.handleInput}
                   min="2022-05-01"
-                  class= "survey_rigth"/>
+                  class= "survey_rigth_input"/>
         </div>
           <br />
 
@@ -131,12 +136,17 @@ class Survey extends React.Component
        <div class="space_div" >  </div>
 
         {/* <input type="submit" value="Enviar" /> */}
-        <button type="submit" class="survey_bottom">
+        <button type="submit" 
+          class = "button-25">
+          {/*  class="survey_bottom"> */}
             Enviar
         </button>
-        <button type="Reset" class="survey_bottom">
+        <button type="Reset" 
+          class = "button-25">
+            {/* class="survey_bottom"> */}
             Resetear
         </button>
+
         {/* <input type="Reset" value="Resetear" /> */}
 
       </form> 

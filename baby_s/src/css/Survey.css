@@ -73,6 +73,16 @@ body {
     margin-bottom: 15px;
   }
 
+  .survey_rigth_input
+  {
+    display: inline-block;
+    width: 40%;
+    height: 20%;
+    text-align: left;
+    vertical-align: top;
+    margin-bottom: 15px;
+  }
+
   section>p+img
   {
     background: red;
@@ -139,4 +149,20 @@ body {
     width:90%;
     padding: 15px;
     display: inline-block; 
+}
+
+@media only screen and (max-width: 767px) {
+  .title_mess {
+      width: 50%;
+  }
+
+  .survey_rigth_input
+  {
+    /* display: inline-block; */
+    width: 65%;
+    /* height: 20%;
+    text-align: left;
+    vertical-align: top;
+    margin-bottom: 15px; */
+  }
 }
