@@ -8,16 +8,16 @@ import { BrowserRouter as Router, Routes, Route,  } from 'react-router-dom';
 // import {Router, Route} from "react-router";
 
 
-import Results from "./html/Results";
-import Intro from "./html/Intro";
-import Survey from './html/Survey';
-import SurveyA from './html/SurveyAlternative';
+import Results from "./Component/Results";
+import Intro from "./Component/Intro";
+import Survey from './Component/Survey';
+import SurveyA from './Component/SurveyAlternative';
 
-import Control from './html/controlX';
-import Chart from './html/chart';
-import ChartA from './html/chartA';
+import Control from './Component/controlX';
+import Chart from './Component/chart';
+import ChartA from './Component/chartA';
 
-import Message from './html/message';
+import Message from './Component/message';
 import Nav from './Extra/Nav'
 import Login from './Extra/Login'
 import Signup from './Extra/Signup'
@@ -25,9 +25,9 @@ import Logout from './Extra/Logout';
 import Dashboard from './Extra/Dashboard';
 import NotFound from './Extra/NotFound';
 import Timer from './Extra/Timer';
-import Intro_F from './html/Intro_F';
+import Intro_F from './Component/Intro_F';
 import New_user from './Extra/Nuevo_usuario';
-import Eraser from './html/eraser';
+import Eraser from './Component/eraser';
 
 //function App() {
 class App extends React.Component

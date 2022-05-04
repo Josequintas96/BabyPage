@@ -15,6 +15,7 @@ class Messsage extends React.Component
     state = {
         isHiddenGender: false,
         isHiddenMessage: false,
+        isHiddenCalendar: false,
         user: '',
         }
 
@@ -32,6 +33,22 @@ class Messsage extends React.Component
               })
         }
     }
+
+    calendar_twist(){
+        if (this.state.isHiddenCalendar)
+        {
+            this.setState({
+                isHiddenCalendar: false
+              })
+        }
+        else
+        {
+            this.setState({
+                isHiddenCalendar: true
+              })
+        }
+    }
+
 
     componentDidMount() {
         if (localStorage.getItem('token') !== null);
@@ -111,6 +128,18 @@ class Messsage extends React.Component
             }
 
             <section class="intro"></section>
+
+            <div class="message_hidd">
+                    <h2 class="title_mess">Calendario</h2>
+                    
+                    {this.state.isHiddenCalendar?
+                        (<img src={A_DOWN} class="mess_picture" onClick={() => this.calendar_twist()}/>)
+                        :
+                        (<img src={A_UP} class="mess_picture" onClick={() => this.calendar_twist()}/>)
+                    } 
+            </div>
+
+            <section class="intro"></section>
              
             {/* <Chart  /> */}
             
@@ -129,7 +158,7 @@ class Messsage extends React.Component
             </div>
 
             
-            {this.state.user ===null?
+            {this.state.user === null?
                 (<>
                     {this.state.isHiddenMessage?
                     (<Standart_p />)

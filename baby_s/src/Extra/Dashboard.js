@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
-import Intro from '../html/Intro';
-import Intro_F from '../html/Intro_F';
+import Intro from '../Component/Intro';
+import Intro_F from '../Component/Intro_F';
 
 const Dashboard = () => {
   const [loading, setLoading] = useState(true);

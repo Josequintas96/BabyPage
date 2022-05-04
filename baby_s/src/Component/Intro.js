@@ -3,7 +3,9 @@ import '../css/Intro.css';
 //image
 import Survey_image from '../image/survey.png';
 import Message_image from '../image/messages.png';
-import Welcome_X from '../image/Welcome.png';
+import baby_val_photo from '../image/gaby_photo/gaby_pregnant.jpeg';
+
+import Timer from '../Extra/Timer.js';
 
 function Intro() {
   return (
@@ -15,29 +17,21 @@ function Intro() {
         Gaby & Val Cuestonario de Nuestro Futuro Babe
       </h1>
 
+      <Timer />
+
       <section class='block_intro'>
         <p >
-          Ha sido una larga espera de nueve meses;
-          enfrentamos difiicultades en este periodo
-          de tiempo, pero ninguna de la cual nos haga 
-          arrepentir de la decision que hemos tomado; 
-          hicimos preciadas memorias en estos nueve meses; 
-          y muchas mas preciadas memorias haremos con la
-          nueva adicion a la familia.
-
-        </p>
-        <p>
-          En celebracion este evento tan especial, 
-          hoy les pido que partipen en este cuestionaio; 
-          que opinan de nuestro futuro bebe, que genereo 
-          creen que sera y que fecha esperen que nasca. 
-        </p>
-        <p>
-          Debajo encontraran dos opciones; a la imagen de 
-          la derecha esta el cuestionario; a la izquierda 
-          esta un confirmante de participacion
+        Los invitamos a participar en nuestra aventura 
+        de ser padres intentando adivinar el sexo de bebé 
+        y la fecha de nacimiento!
+        Además, nos puedes dejar un mensaje para el libro 
+        de oro de bebé!
         </p>
 
+        <p >
+        Confirmar su participacion, y ver como van las 
+        apuestas, entren en resultados dee abajo
+        </p>
 
       </section >
 
@@ -63,6 +57,10 @@ function Intro() {
             </h2 >
         </div>
         
+      </section>
+
+      <section>
+        <img src={baby_val_photo}/>
       </section>
 
       

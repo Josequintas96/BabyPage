@@ -55,10 +55,17 @@ class Survey extends React.Component
 
       <section class="stage">
           <p>
-            Bienvenidos a la celebracion de nuestro futuro bebe; 
-            agradecemos su participacion en este evento tan importane 
-            para nosotros. Porfavor respondan el cuestonario debajo para 
-            escuchar sus opiniones.
+          Por aquí pueden votar por el sexo del bebé, 
+          decirnos si piensas que nacerá otro día que 
+          el día previsto ( 5 de julio) y dejarnos un 
+          mensaje para crear el libro de oro de bebe ! 
+
+          </p>
+          <p>
+            Gracias! 
+          </p>
+          <p>
+            Gaby y Val
           </p>
 
           <img src ={Gaby_belly} />
@@ -89,22 +96,24 @@ class Survey extends React.Component
 
 
 
-        <label for="fname" class="survey_left" >Género:</label>
+        <label for="fname" class="survey_left" > Cual es el sexo del bebé ?:</label>
         <div class= "survey_rigth">
           <select name="gender" 
                   value={this.state.gender} 
                   onChange={this.handleInput}
                   class= "survey_rigth">
-                  <option value="none" selected="null">Genero</option>
-                  <option value="M">Hombre</option>
-                  <option value="F">Mujer</option>
+                  <option value="none" selected="null">Género</option>
+                  <option value="M">Niño</option>
+                  <option value="F">Niña</option>
               </select>
 
         </div>
         
         <br />
 
-        <label for="fname" class="survey_left" >Dia de nacimiento esperado para el bebe:</label>
+        <label for="fname" class="survey_left">
+        La fecha prevista es el 5 de julio, que fecha crees que nacerá ?:
+        </label>
         <div class= "survey_rigth">
             <input type="date" id="mayborn" name="birth" 
                   value={this.state.birth} 
@@ -116,8 +125,10 @@ class Survey extends React.Component
 
 
 
-        <label for="fname" class="survey_left">Mensaje para los padres:</label>
-          <textarea id="w3review" name="message"  rows="4" cols="50" 
+        <label for="fname" class="survey_left">
+            Déjanos tu mensaje para el libro de oro de bebé:
+        </label>
+        <textarea id="w3review" name="message"  rows="4" cols="50" 
                     value={this.state.message} 
                     onChange={this.handleInput}
                     placeholder="Escribe tu mensaje aqui."
