@@ -3,6 +3,8 @@ from django.shortcuts import redirect, render
 from rest_framework.views import APIView
 from rest_framework.decorators import api_view
 
+from django.db.models import Count
+
 
 from rest_framework.generics import ListAPIView
 
@@ -87,5 +89,27 @@ class Gender_count_View(APIView):
             }
         ]
         return Response(countsG)
+    
+    
+class Date_count_View(APIView):
+    
+    def get(self, request):
+        # countsCalendar = {}
+        
+        countsCalendar = Survey.objects.values(
+                        birth).order_by(
+                        birth).annotate(the_count=Count(birth))
+
+        # Survey.objects.filter(
+            # event="birth",
+            # ).order_by('birth').values(
+            #     'birth__date'
+            # ).annotate(count=Count('birth__date'))
+
+        return Response(countsCalendar)
+    
+
+    
+        return Response(countsCalendar)
         
           

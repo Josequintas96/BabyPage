@@ -17,54 +17,65 @@ function Intro() {
         Gaby & Val Cuestonario de Nuestro Futuro Babe
       </h1>
 
+      <section class="intro"> </section>
+
       <Timer />
 
-      <section class='block_intro'>
-        <p >
-        Los invitamos a participar en nuestra aventura 
-        de ser padres intentando adivinar el sexo de bebé 
-        y la fecha de nacimiento!
-        Además, nos puedes dejar un mensaje para el libro 
-        de oro de bebé!
-        </p>
+      <section class="intro"> </section>
 
-        <p >
-        Confirmar su participacion, y ver como van las 
-        apuestas, entren en resultados dee abajo
-        </p>
+      <section  class="Intro_section">
+        <section class="Intro_section_c">
+            <p >
+            Los invitamos a participar en nuestra aventura 
+            de ser padres intentando adivinar el sexo de bebé 
+            y la fecha de nacimiento!
+            Además, nos puedes dejar un mensaje para el libro 
+            de oro de bebé!
+            </p>
 
-      </section >
+            <p >
+            Confirmar su participacion, y ver como van las 
+            apuestas, entren en resultados dee abajo
+            </p>
 
-      <section class='link_intro'>
-        <div ass="intro_res">
-            <a href='/message'>
-              <img src={Message_image}/>
-            </a>
-            <h2>
-                Resultados
-            </h2>
-        </div>
-        
-        <p class="intro_navigator">
-        {/* &lt;- Navigator -&gt; */}
-        </p>
-        <div class="intro_sur">
             <a href='/survey'>
-              <img src={Survey_image} />
+              <img src={Survey_image} class="Intro_section_image"/>
             </a>
-            <h2>
+            <h4>
               Cuestionario
-            </h2 >
-        </div>
-        
+            </h4 >
+        </section>
+
+        <section class="Intro_section_c2">
+          
+            <img src={baby_val_photo} class="Intro_section_image2"/>
+          
+        </section>
+
+        <section class="Intro_section_c">
+            <p >
+            Confirmar su participacion, y ver como van las 
+           apuestas, entren en resultados de abajo
+            </p>
+
+    
+
+            
+            <a href='/message'>
+              <img src={Message_image} class="Intro_section_image"/>
+            </a>
+            <h4>
+                Resultados
+            </h4>
+       
+        </section>
+
+
       </section>
 
-      <section>
-        <img src={baby_val_photo}/>
-      </section>
 
       
-
+      <section class="intro"> </section>
 
       <footer class="footer">
 

@@ -43,7 +43,7 @@ const New_user = () => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: (user),
+      body: JSON.stringify(user),
       
     })
       .then(res => res.json())

@@ -2,6 +2,7 @@ import '../css/Survey.css';
 import React from "react";
 import axios from 'axios';
 
+
 import Gaby_belly from "../image/gaby_photo/gaby_pregnant2.jpeg";
 
 class Survey extends React.Component
@@ -36,6 +37,7 @@ class Survey extends React.Component
 				          birth: "",
 			            message: "",
               });
+              window.location.replace('/');
           })
           .catch((err) => {
             this.setState({
@@ -52,6 +54,8 @@ class Survey extends React.Component
       <h1 calss='Surveyh1'>
         Gaby & Val Cuestonario de su Misteriooso Bebe
       </h1>
+
+      
 
       <section class="stage">
           <p>

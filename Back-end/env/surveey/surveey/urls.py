@@ -27,7 +27,10 @@ urlpatterns = [
     path('wel/', ReactView.as_view(), name="something"),
     path('core/', include('core.urls')),
     path('count/', Gender_count_View.as_view(), name="count gender"),
+    path('countCalendar/', Date_count_View.as_view(), name="count calendar"),
     path('api/v1/users/', include('core.urls')),
     
 ] 
 # + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+# 
+    

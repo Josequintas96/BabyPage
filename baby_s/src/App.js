@@ -36,10 +36,6 @@ class App extends React.Component
         {
           return (
             <div className="App"> 
-              {/* <section class="AppNav">
-                  
-              </section> */}
-              
 
               <div class='ControlB' >
               <Router>

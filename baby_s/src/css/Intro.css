@@ -1,7 +1,7 @@
 .controlBB
 {
-    width: 80%;
-    margin-left: 10%;
+    width: 94%;
+    margin-left: 3%;
     height: 100%;
     background-color: transparent;
 }
@@ -135,3 +135,95 @@
     height: 10%;
     padding-bottom: 100px;
 }
+
+/* 
+    ####################################################
+    ####################################################
+    ####################################################
+*/
+
+.Intro_section
+{
+    /* background-color: aqua; */
+    width: 100%;
+    /* border: 2px solid black ; */
+    /* display: inline-block; */
+    display: flex;
+    padding : 0px;
+}
+
+.Intro_section_c
+{
+    /* display: inline-block; */
+    background-color: white;
+    border: 2px solid black ;
+    border-radius: 20%;
+    width: 30%;
+    margin: 5px;
+    min-height: 700px;
+    height: 100%;
+    align-content: center;
+}
+
+.Intro_section_c2
+{
+    /* display: inline-block; */
+    border-radius: 20%;
+    width: 30%;
+    margin: 5px;
+}
+
+.Intro_section_c .Intro_section_image
+{
+    width: 80%;
+}
+
+.Intro_section_c2 .Intro_section_image2
+{
+    width: 100%;
+    height: 100%;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .Intro_section
+    {
+        /* background-color: aqua; */
+        width: 100%;
+        /* border: 2px solid black ; */
+        display: inline;
+        padding : 0px;
+    }
+
+    .Intro_section_c
+    {
+        display: inline-block;
+        background-color: white;
+        border: 2px solid black ;
+        border-radius: 20%;
+        width: 90%;
+        margin: 5px;
+        min-height: 0px;
+    }
+
+    .Intro_section_c2
+    {
+        display: inline-block;
+        border-radius: 20%;
+        width: 90%;
+        margin: 5px;
+    }
+
+    .Intro_section_c .Intro_section_image
+    {
+        width: 80%;
+    }
+
+    .Intro_section_c2 .Intro_section_image2
+    {
+        width: 100%;
+        height: 100%;
+    }
+    
+  }

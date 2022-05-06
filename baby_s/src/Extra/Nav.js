@@ -24,21 +24,41 @@ const Nav = () => {
       if (localStorage.getItem('token') !== null) {
         setIsAuth(true);
       }
+      if (localStorage.getItem('language') === null) {
+        localStorage.setItem('language', "Spanish");
+      }
+      
     }, []);
 
     function linktohome() {
         
-            window.location.href = "http://localhost:3000/";
+            window.location.href = "/";
 
           };
 
+    function Spanish_token()
+    {
+      if (localStorage.getItem('language') !== null || localStorage.getItem('language') === 'France') {
+        localStorage.setItem('language', "Spanish");
+        window.location.reload();
+      }
+    }
+
+    function France_token()
+    {
+      console.log("FranceBatman")
+      if (localStorage.getItem('language') === 'Spanish') {
+        localStorage.setItem('language', "France");
+        window.location.reload();
+      }
+    }
   
         return (
           <section class="Nav"   >
               <div class="NavL">
               
-                <img src={Ven} class="NavImg" />
-                <img src={France} class="NavImg" />
+                <img src={Ven} class="NavImg" onClick={() => Spanish_token()}/>
+                <img src={France} class="NavImg" onClick={() => France_token()} />
                 {/* <img src={Wedding} class="NavImg" /> */}
               </div>
 
@@ -53,6 +73,7 @@ const Nav = () => {
                     </Link>
                   </>)} 
               
+                  
                   
               </div>
 

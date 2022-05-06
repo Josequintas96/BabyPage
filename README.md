@@ -42,11 +42,21 @@ video
     =>https://www.youtube.com/watch?v=P0Fz4V9G1G0&t=376s
 
 
-Conbttrol_Firebase:
-    install new updates: npm run build; firebase deploy
+Conbtrol_Firebase:
+    npm run build; firebase deploy
 
-Run RReact:
+Control Heroku:
+    Webpage:
+        http://gaby-val-future2022.herokuapp.com/
+    Directory: 
+        /Users/failop/Projects/GabyWeb/BabyPage/Back-end/env/surveey
+    Run:
+        install new updates: npm run build; firebase deploy
+
+Run React:
     npm start
+
+
 
 
 Google bakgroound search
