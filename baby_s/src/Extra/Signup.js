@@ -26,7 +26,7 @@ const Signup = () => {
     };
 
     // fetch('http://127.0.0.1:8000/api/v1/users/auth/register/', {
-    fetch('https://gaby-val-future2022.herokuapp.com/api/v1/users/auth/register/', {
+    fetch('https://gaby-val-future-baby2022.herokuapp.com/api/v1/users/auth/register/', {
     
       method: 'POST',
       headers: {

@@ -13,18 +13,12 @@ function ChartA ()
     const [width, setWidth] = useState(WIDTH)
     const [half, setHalf] = useState(WIDTH/2)
 
-    // state = {
-    //     gender: [],
-    //     // [active, setActive] : useState(null),
-    //     active: null,
-    //     width: WIDTH,
-    //     half : WIDTH / 2,
-    // };
+
 
     useEffect(async () => {
         const result = await axios(
             // "http://127.0.0.1:8000/count/",
-            "https://gaby-val-future2022.herokuapp.com/count/"
+            "https://gaby-val-future-baby2022.herokuapp.com/count/"
             );
 
             setData(result.data);

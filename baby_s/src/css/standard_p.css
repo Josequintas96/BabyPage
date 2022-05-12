@@ -1,0 +1,85 @@
+
+.standard_
+{
+    width: 70%;
+    margin-left: 15%;
+    /* background-color: white; */
+    padding-bottom: 5px;
+    display: inline-block;
+    min-height: 45px;
+    /* display: inline-block; */
+    display: flex;
+    font-family: "Lucida Console";
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.standard_:hover
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 0px;
+    box-shadow: 0 4px 8px 0 rgb(25, 25, 25), 0 6px 20px 0 rgb(0, 0, 0);
+}
+
+.standard_:hover
+{
+    min-height: 55px;
+}
+
+.standard_id
+{
+    /* display: inline-block; */
+    /* float: left; */
+    display: flex;
+    width: 20%;
+    border: 2px solid black;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.standard_name
+{
+    /* float: left; */
+    display: flex;
+    width: 79%;
+    border: 2px solid black;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.st_primary
+{
+    background-color: rgb(13, 158, 20);
+}
+
+
+
+.st_secondary
+{
+    background-color: rgb(13, 139, 158);
+}
+
+.st_third
+{
+    background-color: rgb(83, 90, 230);
+}
+
+.st_fourth
+{
+    background-color: rgb(222, 53, 228);
+}
+
+.st_fifth
+{
+    background-color: rgb(255, 119, 0);
+}
+
+.st_sixth
+{
+    background-color: rgb(255, 119, 0);
+}
+
+

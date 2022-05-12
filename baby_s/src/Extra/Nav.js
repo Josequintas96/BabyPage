@@ -11,7 +11,7 @@ import axios from 'axios';
 import Ven from "../image/icons_flag/venezuela.png";
 import France from "../image/icons_flag/france.png";
 import Wedding from "../image/wedding.png";
-import baby from "../image/baby.png";
+import baby from "../image/icons_baby/baby_house.png";
 import { Link } from 'react-router-dom';
 
 
@@ -38,7 +38,7 @@ const Nav = () => {
 
     function Spanish_token()
     {
-      if (localStorage.getItem('language') !== null || localStorage.getItem('language') === 'France') {
+      if (localStorage.getItem('language') === 'France') {
         localStorage.setItem('language', "Spanish");
         window.location.reload();
       }
@@ -55,27 +55,40 @@ const Nav = () => {
   
         return (
           <section class="Nav"   >
+                <div class="NavR">
+                  {isAuth === true ?
+                      (<Link to="/" class="NavR2" > 
+                        <img src={Wedding} class="NavImg" />
+                      </Link>):
+                      (<>
+                        <Link to="/" class="NavR2" >
+                          <img src={baby} class="NavImg" description="cambia lenguaje"  />
+                        </Link>
+                      </>)
+                  }
+                </div>
+
+                <div class="NavL">
+                  <img src={Ven} class="NavImg" onClick={() => Spanish_token()}/>
+                  <img src={France} class="NavImg" onClick={() => France_token()} />
+                </div>
+
+                {/* <img src={Wedding} class="NavImg" />
+                 */}
+                
+
+{/*       
+              
+
+
               <div class="NavL">
               
                 <img src={Ven} class="NavImg" onClick={() => Spanish_token()}/>
                 <img src={France} class="NavImg" onClick={() => France_token()} />
-                {/* <img src={Wedding} class="NavImg" /> */}
-              </div>
+                
+              </div> */}
 
-              <div class="NavR">
-              {isAuth === true ?
-                   (<Link to="/" class="NavR2" > 
-                    <img src={Wedding} class="NavImg" />
-                  </Link>):
-                  (<>
-                    <Link to="/" class="NavR2" >
-                      <img src={baby} class="NavImg"  />
-                    </Link>
-                  </>)} 
               
-                  
-                  
-              </div>
 
 
           </section>

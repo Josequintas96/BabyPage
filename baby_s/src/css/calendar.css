@@ -1,0 +1,148 @@
+.calendar_cont
+{
+    width: 80%;
+    /* margin-left: 10%; */
+    display: inline-block;
+    /* background-color: aqua; */
+}
+
+.bar_rank
+{
+    /* max-width: 18%;
+    display: inline-block; */
+    float: left;
+    width: 5%;
+    height: 40px;
+    margin-right: 0px;
+    /* background-color: black; */
+}
+
+.bar_cont
+{
+    width: 95%;
+    display: inline-block;
+}
+
+.bar_img
+{
+    width: 40px;
+    height: 40px;
+}
+
+.bar_title
+{
+    width: 0px;
+    height: 0px;
+}
+
+
+
+.containerStyles
+{
+    height: 40px;
+    width: 100%;
+    /* margin-left: 10%; */
+    background-color: "#e0e0de";
+    border-radius: 50px;
+    margin-bottom: 30px;
+}
+
+.labelStyles
+{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.word_calendar
+{
+    text-align: 'center';
+}
+
+@media only screen and (max-width: 767px) {
+
+    .bar_rank
+    {
+        /* max-width: 18%;
+        display: inline-block; */
+        float: none;
+        width: 100%;
+        /* display: inline-block; */
+        /* height: 50px; */
+        /* background-color: black; */
+    }
+    .sp_0
+    {
+        height: 50px;
+    }
+
+    .bar_cont
+    {
+        width: 90%;
+        display: inline-block;
+        margin-bottom: 0px;
+    }
+
+    .bar_img
+    {
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border-radius: 50%;
+        margin-bottom: 10px;;
+        float: left;
+    }
+
+    .sp_X
+    {
+        
+        width: 50%;
+    }
+    .bar_spX
+    {
+        float: left;
+        text-align: left;
+        margin-top: 20px;
+        margin-left: 5px ;
+    }
+
+    
+
+    .bar_title
+    {
+        float: left;
+        width: 50px;
+        /* 
+        height: 50px; */
+        background-color: white;
+        border-radius: 50%;
+        font-size: 30px;
+        vertical-align: top;
+        line-height: 1px;
+        
+    }
+
+    .word_calendar
+    {
+        text-align: left;
+        padding-left: 12px;
+    }
+
+    .containerStyles
+    {
+        margin-bottom: 5px;
+    }
+
+    
+}
+
+/* .fillerStyles
+{
+    height: 100%;
+    width: `${completed}%`;
+    backgroundColor: bgcolor,
+    borderRadius: 'inherit',
+    textAlign: 'right'
+} */
+
+

@@ -12,7 +12,7 @@ const Login = () => {
     if (localStorage.getItem('token') !== null) {
       // window.location.replace('http://localhost:3000/');
       window.location.replace('/');
-      // window.location.replace("https://gaby-val-future2022.herokuapp.com/dashoboard")
+      // window.location.replace("https://gaby-val-future-baby2022.herokuapp.com/dashoboard")
     } else {
       setLoading(false);
     }
@@ -27,7 +27,7 @@ const Login = () => {
     };
 
     // fetch('http://127.0.0.1:8000/api/v1/users/auth/login/', {
-    fetch("https://gaby-val-future2022.herokuapp.com/api/v1/users/auth/login/", {  
+    fetch("https://gaby-val-future-baby2022.herokuapp.com/api/v1/users/auth/login/", {  
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -41,7 +41,7 @@ const Login = () => {
           localStorage.setItem('token', data.key);
           window.location.replace('/');
           // window.location.replace('http://localhost:3000/');
-          // window.location.replace("https://gaby-val-future2022.herokuapp.com/dashboard");
+          // window.location.replace("https://gaby-val-future-baby2022.herokuapp.com/dashboard");
         } else {
           setEmail('');
           setPassword('');

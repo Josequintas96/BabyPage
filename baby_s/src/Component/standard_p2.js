@@ -1,4 +1,4 @@
-import '../css/result.css';
+import '../css/standard_p.css';
 
 
 import React from "react";
@@ -9,7 +9,7 @@ import Male_baby from "../image/son.png";
 import Female_baby from "../image/daughter.png";
 import Question from "../image/question.png";
 
-class Standart_p extends React.Component
+class Standart_p2 extends React.Component
 {
     constructor(props) {
       super(props);
@@ -38,21 +38,23 @@ class Standart_p extends React.Component
     }
 
     renderSwitch = (param) => {
-      switch (param + 1) {
-          case 1:
-              return "primary ";
-          case 2:
-              return "secondary";
-          case 3:
-              return "success";
-          case 4:
-              return "danger";
-          case 5:
-              return "warning";
-          case 6:
-              return "info";
-          default:
-              return "yellow";
+      switch (param%5) {
+            case 0:
+                return "st_sixth";
+            case 1:
+              return "st_primary ";
+            case 2:
+              return "st_secondary";
+            case 3:
+              return "st_third";
+            case 4:
+                return "st_fourth";
+            case 5:
+                return "st_fifth";
+            default:
+                return "st_sixth";
+          
+              
       }
   };
 
@@ -75,36 +77,24 @@ class Standart_p extends React.Component
             {this.state.details.filter(detailX => detailX.name.includes(this.state.search)
             ).map((detail, id) => (
 					
-                <div key={id}>
-                    <div class="participant_p">
-                      <div class="message_control">
-                      <section class="message_name">
-                            {/* <blockquote className={"text-" + this.renderSwitch(id % 6) + 
-                                              " blockquote mb-0"}> */}
-                                <h1> {detail.name} </h1>
-                                <h4 class={"bg-" + this.renderSwitch(id % 6) }>
-                                    Participant {id + 1}
-                                </h4>
-                            {/* </blockquote> */}
-                        </section>
-                        </div>
+                <div class="standard_">
+                    <div class={"standard_id "+this.renderSwitch(id)}>
+                            {id}
                     </div>
-                    {/* <span className="border border-primary "></span> */}
+
+                    <div class={"standard_name "+this.renderSwitch(id)}>
+                        {detail.name}
+                    </div>
+                     
                 </div>
               ))}
-
-
-            <footer class="footer">
-
-            </footer>
-
-
+              
           </body>
           
         );
       }
 }
 
-export default Standart_p;
+export default Standart_p2;
 
 

@@ -16,10 +16,10 @@ const calculateTimeLeft = () => {
   
     if (difference > 0) {
       timeLeft = {
-        D: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        H: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        min: Math.floor((difference / 1000 / 60) % 60),
-        sec: Math.floor((difference / 1000) % 60)
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60)
       };
     }
   
@@ -51,11 +51,22 @@ const Timer = () => {
     }
     
     timerComponents.push(
-        <div class={"Timer_control"+timerComponents.length }>
-        <h1>
-            {timeLeft[interval]} {interval}{" "}
-        </h1>
+        
+        <div class="Timer_block">
+          <div class="Timer_text">
+            <h1 class="Timer_h1">
+            {timeLeft[interval]} 
+            </h1>
+            <h3 class="Timer_h3">
+                {interval}
+            </h3>
+          </div>
+          <div class={"Timer_separation "+ "time_Sp"+timerComponents.length}>
+            {" : "}
+          </div>
         </div>
+        
+
     );
     });
 
@@ -65,7 +76,7 @@ const Timer = () => {
           <section class="Timer"   >
             <h1 class="Timer_title">Tiempo antes del Nacimiento</h1>
             
-            {timerComponents.length ? timerComponents : <span>Ha llegado!</span>}
+                {timerComponents.length ? timerComponents : <span>Has llegado!</span>}
 
 
           </section>

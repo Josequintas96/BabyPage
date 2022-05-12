@@ -97,8 +97,9 @@ class Date_count_View(APIView):
         # countsCalendar = {}
         
         countsCalendar = Survey.objects.values(
-                        birth).order_by(
-                        birth).annotate(the_count=Count(birth))
+                        'birth').order_by(
+                        'birth').annotate(votes=Count('birth'))
+                        
 
         # Survey.objects.filter(
             # event="birth",

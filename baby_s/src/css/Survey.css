@@ -18,34 +18,64 @@ body {
     
   }
   
-  .stage
-  {
+.stage
+{
     border: 5px  black;
-    background: rgb(152, 158, 214);
-    border-radius: 50px;
+    
     min-height: 300px;
     width:90%;
+    /* margin-left: 5%; */
+    display: inline-block;
     padding: 15px;
-    display: inline-block; 
+    padding-bottom: 20px;
+    overflow: hidden;
+    border-radius: 50px;
+    /* display: inline-block;  */
+}
+
+.st0
+{
+  background: rgb(152, 158, 214);
+}
+
+
+
+  .stage_p
+  {
+    border-radius: 50px;
+    margin-left: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 30%;
+    float: left;
+    background: rgb(152, 158, 214);
+    height: 600px;
+    border: 5px black;
+    border: 10px solid transparent;
+    
+    /* max-height: 600px; */
   }
   
+  .stage_img
+  {
+    margin-left: 5%;
+    float: right;
+    border: 10px solid white;
+    width: 40%;
+    margin-right: 5%;
+    max-height: 600px;
+    vertical-align: top;
+  }
+  
+
   section>p
   {
     display: inline-block;
     width: 60%;
-    height: 90%;
     margin:10px;
-    vertical-align: top;
+    /* vertical-align: top; */
   }
   
-  /* section>p+p
-  {
-    background: red;
-    display: inline-block;
-    width: 35%;
-    height: 90%;
-    vertical-align: top;
-  } */
 
   .space_div
   {
@@ -63,6 +93,11 @@ body {
     margin-right: 3%;
   }
 
+  .survey_rigth_i
+  {
+      width: 50%;
+  }
+
   .survey_rigth
   {
     display: inline-block;
@@ -73,7 +108,7 @@ body {
     margin-bottom: 15px;
   }
 
-  .survey_rigth_input
+  .survey_rigth_iX
   {
     display: inline-block;
     width: 40%;
@@ -124,22 +159,6 @@ body {
     background-color: rgb(195, 124, 124);
     color: rgb(107, 2, 2);
   }
-  
-  /* section label
-  {
-    color: black;
-    display: inline-block;
-    width:  47%;
-    text-align: rigth;
-  }
-  
-  section input
-  {
-    color: black;
-    display: inline-block;
-    width:  47%;
-    text-align: left;
-  } */
 
 .stageF
 {
@@ -156,13 +175,54 @@ body {
       width: 50%;
   }
 
-  .survey_rigth_input
+  
+
+  .stage_p
   {
-    /* display: inline-block; */
-    width: 65%;
-    /* height: 20%;
-    text-align: left;
-    vertical-align: top;
-    margin-bottom: 15px; */
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+    margin-left: 0;
+    padding: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    float: none;
+    
+    max-height: 600px;
+    border: 5px black;
   }
+  
+  .stage_img
+  {
+    /* margin-left: 7%; */
+    float: none;
+
+    width: 70%;
+    max-height: 600px;
+  }
+
+  .survey_rigth
+  {
+    width: 100%;
+  }
+
+  .survey_rigth_i
+  {
+      width: 80%;
+      margin-left: 10%;
+  }
+
+  .survey_rigth_iX
+  {
+    width: 80%;
+  }
+
+  .survey_left
+  {
+      width: 80%;
+      margin-left: 10%;
+      text-align: center;
+  }
+  
 }

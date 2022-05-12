@@ -6,7 +6,11 @@ import React from "react";
 import axios from 'axios';
 import "../css/chart.css"
 
-const WIDTH = 400;
+let WIDTH = 400;
+if (window.innerWidth)
+{
+    WIDTH = 350;
+}
 var coins = [
   { symbol: "ADA", amount: 800, color: "#0033ad" },
   { symbol: "SOL", amount: 5, color: "#00ffbd" },
@@ -29,7 +33,7 @@ class Chart extends React.Component
 //   http://localhost:8000/wel/
         axios
             // .get("http://127.0.0.1:8000/count/")
-            .get("https://gaby-val-future2022.herokuapp.com/count/")
+            .get("https://gaby-val-future-baby2022.herokuapp.com/count/")
             .then((res) => {
                 data = res.data;
                 console.log("THIS IS COUNT: ", res.data)

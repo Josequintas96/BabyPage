@@ -21,7 +21,7 @@ class SurveyA extends React.Component
       e.preventDefault();
       axios
         // .post("http://localhost:8000/wel/", {
-          .post("https://gaby-val-future2022.herokuapp.com/wel/", { 
+          .post("https://gaby-val-future-baby2022.herokuapp.com/wel/", { 
               name: this.state.name,
 			        gender: this.state.gender,
 			        birth: this.state.birth,

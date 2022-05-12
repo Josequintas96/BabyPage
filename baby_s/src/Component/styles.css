@@ -1,0 +1,10 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  svg#hsbarExample {
+    border: 2px solid #363636;
+    border-radius: 8px;
+  }
+  

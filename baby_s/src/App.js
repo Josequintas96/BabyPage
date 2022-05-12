@@ -28,6 +28,11 @@ import Timer from './Extra/Timer';
 import Intro_F from './Component/Intro_F';
 import New_user from './Extra/Nuevo_usuario';
 import Eraser from './Component/eraser';
+import Calendar from './Component/calendar';
+import Standart_p from './Component/standard_p2';
+
+import baby from "./image/icons_baby/baby_house.png";
+import baby_h from "./image/icons_baby/baby_house.png";
 
 //function App() {
 class App extends React.Component
@@ -61,12 +66,21 @@ class App extends React.Component
                             <Route exact path='/chartA' element={<ChartA />} />
                             <Route exact path='/Timer' element={<Timer />} />
                             <Route exact path='/eraser' element={<Eraser />} />
+                            <Route exact path='/calendar' element={<Calendar />} />
+                            <Route exact path='/standard' element={<Standart_p />} />
                             {/* <Route exact path="/survey" render={(props) => (<Search Input={this.state.search_for} search_F={this.handleSearch} /> )} /> */}
                             <Route path="/*" element={<NotFound />} />
                           {/* </Switch> */}
                       </Routes>
               </Router>
               </div>
+
+              <footer class="App_footer">
+                  <a href="/">
+                        <img src={baby_h} class="image_footer"/>
+                  </a>
+                 
+              </footer>
             </div>
           );
         }

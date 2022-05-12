@@ -1,18 +1,16 @@
-import '../css/message.css';
+import '../../css/message.css';
 import React from "react";
-import Chart from "./chart";
-import Result from "./Results";
-import Standart_p from './standart_p'
-import Standart_p2 from './standard_p2'
-import Calendar from './calendar';
+import Chart from "../chart";
+import Result from "../Results";
+import Standart_p from '../standart_p'
 
-import A_DOWN from "../image/A-DOWN.png";
-import A_UP from "../image/A-UP.png";
+import A_DOWN from "../../image/A-DOWN.png";
+import A_UP from "../../image/A-UP.png";
 
 
 //image
 
-class Messsage extends React.Component
+class MesssageSp extends React.Component
 {
     state = {
         isHiddenGender: false,
@@ -141,15 +139,6 @@ class Messsage extends React.Component
                     } 
             </div>
 
-            {this.state.isHiddenCalendar?
-                (<div >
-                    <Calendar  />
-                </div>)
-                :
-                (<></>)
-            }
-            
-
             <section class="intro"></section>
              
             {/* <Chart  /> */}
@@ -172,7 +161,7 @@ class Messsage extends React.Component
             {this.state.user === null?
                 (<>
                     {this.state.isHiddenMessage?
-                    (<Standart_p2 />)
+                    (<Standart_p />)
                     :
                     (<></>)
                     } 
@@ -191,7 +180,11 @@ class Messsage extends React.Component
             
             <section class="intro"></section>
 
-           
+            <br class="space_div"/>
+
+            <footer class="footer">
+
+            </footer>
 
 
             </body>
@@ -200,5 +193,4 @@ class Messsage extends React.Component
     }
 }
 
-export default Messsage;
-
+export default MesssageSp;

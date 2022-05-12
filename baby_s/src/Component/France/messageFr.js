@@ -1,18 +1,16 @@
-import '../css/message.css';
+import '../../css/message.css';
 import React from "react";
-import Chart from "./chart";
-import Result from "./Results";
-import Standart_p from './standart_p'
-import Standart_p2 from './standard_p2'
-import Calendar from './calendar';
+import Chart from "../chart";
+import Result from "../Results";
+import Standart_p from '../standart_p'
 
-import A_DOWN from "../image/A-DOWN.png";
-import A_UP from "../image/A-UP.png";
+import A_DOWN from "../../image/A-DOWN.png";
+import A_UP from "../../image/A-UP.png";
 
 
 //image
 
-class Messsage extends React.Component
+class MesssageFr extends React.Component
 {
     state = {
         isHiddenGender: false,
@@ -90,23 +88,23 @@ class Messsage extends React.Component
             <body class="controlBB">
 
             <h1>
-                Tablero de Mensajes
+                Babillard
             </h1>
 
             <section class='block_intro'>
                 {this.state.user ===null?
                     (<p >
-                        Gracias por participar en esta
-                        maravillosa experiencia;
-                        Como prueba de su participacion, 
-                        aqui estan los resultados de
-                        su participacion.
+                        Merci d'avoir participé à cette merveilleuse 
+                        expérience. Comme preuve de votre participation, 
+                        voici les résultats de votre participation.
                         </p>)
                     :
                     (<p >
-                        Aqui estaan los participantes y sus deseas a tu persona; 
-                        espero que sus mensajes te lleguen sano y salvo y te deseeen prosperidad.
-                        </p>)
+                        Voici les participants et leurs souhaits à votre 
+                        personne; J'espère que leurs messages vous 
+                        parviendront sains et saufs et vous souhaite la 
+                        prospérité.
+                    </p>)
                     }
                 
             </section >
@@ -115,7 +113,7 @@ class Messsage extends React.Component
 
             {/* <button onclick={this.myFunction()}>Click Me</button> */}
             <div class="message_hidd">
-                <h2 class="title_mess"> Resultados</h2>
+                <h2 class="title_mess"> Résultats</h2>
                     {this.state.isHiddenGender?
                         (<img src={A_DOWN} class="mess_picture" onClick={() => this.gender_twist()}/>)
                         :
@@ -132,7 +130,7 @@ class Messsage extends React.Component
             <section class="intro"></section>
 
             <div class="message_hidd">
-                    <h2 class="title_mess">Calendario</h2>
+                    <h2 class="title_mess">Calendrier</h2>
                     
                     {this.state.isHiddenCalendar?
                         (<img src={A_DOWN} class="mess_picture" onClick={() => this.calendar_twist()}/>)
@@ -141,24 +139,15 @@ class Messsage extends React.Component
                     } 
             </div>
 
-            {this.state.isHiddenCalendar?
-                (<div >
-                    <Calendar  />
-                </div>)
-                :
-                (<></>)
-            }
-            
-
             <section class="intro"></section>
              
             {/* <Chart  /> */}
             
             <div class="message_hidd">
                     {this.state.user ===null?
-                    (<h2 class="title_mess">Participantes</h2>)
+                    (<h2 class="title_mess">Intervenants</h2>)
                     :
-                    (<h2 class="title_mess">Mensajes</h2>)
+                    (<h2 class="title_mess">Des postes</h2>)
                     }
                     
                     {this.state.isHiddenMessage?
@@ -172,7 +161,7 @@ class Messsage extends React.Component
             {this.state.user === null?
                 (<>
                     {this.state.isHiddenMessage?
-                    (<Standart_p2 />)
+                    (<Standart_p />)
                     :
                     (<></>)
                     } 
@@ -191,7 +180,11 @@ class Messsage extends React.Component
             
             <section class="intro"></section>
 
-           
+            <br class="space_div"/>
+
+            <footer class="footer">
+
+            </footer>
 
 
             </body>
@@ -200,5 +193,4 @@ class Messsage extends React.Component
     }
 }
 
-export default Messsage;
-
+export default MesssageFr;

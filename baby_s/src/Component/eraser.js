@@ -53,7 +53,7 @@ class Eraser extends React.Component
       console.log("Console = ", this.state.name)
       axios
         // .post("http://localhost:8000/wel/", {
-        .delete("https://gaby-val-future2022.herokuapp.com/wel/", 
+        .delete("https://gaby-val-future-baby2022.herokuapp.com/wel/", 
             // { method: 'DELETE' },
             {data: { 
             user_name: this.state.name
