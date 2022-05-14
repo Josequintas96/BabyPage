@@ -53,8 +53,6 @@ class Standart_p2 extends React.Component
                 return "st_fifth";
             default:
                 return "st_sixth";
-          
-              
       }
   };
 
@@ -74,7 +72,7 @@ class Standart_p2 extends React.Component
                 class="input_r"/>
             </form>
 
-            {this.state.details.filter(detailX => detailX.name.includes(this.state.search)
+            {this.state.details.filter(detailX => detailX.name.toLowerCase().includes(this.state.search.toLowerCase())
             ).map((detail, id) => (
 					
                 <div class="standard_">

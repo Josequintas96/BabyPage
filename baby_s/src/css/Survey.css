@@ -35,26 +35,31 @@ body {
 
 .st0
 {
-  background: rgb(152, 158, 214);
+  /* background: rgb(152, 158, 214); */
+    background: rgb(146, 218, 175); 
+
+  /* background: white; */
 }
 
 
 
-  .stage_p
-  {
+.stage_p
+{
     border-radius: 50px;
     margin-left: 5%;
     padding-left: 5%;
     padding-right: 5%;
     width: 30%;
     float: left;
-    background: rgb(152, 158, 214);
+    /* background: rgb(152, 158, 214); */
+    /* background: white; */
+    background: rgb(146, 218, 175); 
     height: 600px;
     border: 5px black;
     border: 10px solid transparent;
     
     /* max-height: 600px; */
-  }
+}
   
   .stage_img
   {
@@ -130,15 +135,17 @@ body {
   
   .intro
   {
-    background: Black;
+    /* background: Black; */
     height:  20px;
     margin:  15px;
   }
   
   .Surveyh1
   {
-    color: red;
+   background-color: white;
+   width: 70%;
     text-align: center;
+    display: inline-block;
   }
 
   .survey_bottom

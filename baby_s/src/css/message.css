@@ -1,3 +1,8 @@
+.message_title
+{
+    background-color: white;
+}
+
 .message_hidd
 {
     width: 80%;
@@ -55,5 +60,6 @@
 @media only screen and (max-width: 767px) {
     .title_mess {
         width: 50%;
+        font-size: 20px;
     }
   }

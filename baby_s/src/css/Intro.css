@@ -1,3 +1,11 @@
+
+.intro_title
+{
+    background-color: white;
+    display: inline-block;
+    width: 60%;
+}
+
 .controlBB
 {
     width: 94%;

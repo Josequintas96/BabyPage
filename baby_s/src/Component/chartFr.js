@@ -11,13 +11,15 @@ if (window.innerWidth)
 {
     WIDTH = 350;
 }
-var coins = [
-  { symbol: "ADA", amount: 800, color: "#0033ad" },
-  { symbol: "SOL", amount: 5, color: "#00ffbd" },
-  { symbol: "BTC", amount: 9, color: "#F7931A" },
-];
 
-class Chart extends React.Component
+function fingirlamount(array, title) {
+
+    return array.find((element) => {
+      return element.symbol === title;
+    })
+  }
+
+class ChartFr extends React.Component
 {
     state = {
         gender: [],
@@ -49,8 +51,7 @@ class Chart extends React.Component
         (this.state.gender.reduce((totalg,currentItem) =>  totalg = totalg + currentItem.amount , 0 ));
 
         const totalgirls = 
-            (this.state.gender.reduce((totalgirls,currentItem) =>  
-            (currentItem.symbol === "Niñas")?  totalgirls = totalgirls + currentItem.amount : totalgirls = 0, 0 ));
+        (this.state.gender.reduce((totalgirls,currentItem) =>  (currentItem.symbol === "Niñas")?  totalgirls = totalgirls + currentItem.amount : totalgirls = 0, 0 ));
         const totalboys= 
         (this.state.gender.reduce((totalboys,currentItem) =>  (currentItem.symbol === "Niños")?  totalboys = totalgirls + currentItem.amount : totalboys = 0, 0 ));
             return (
@@ -100,15 +101,20 @@ class Chart extends React.Component
                                 textAnchor="middle"
                                 fill={this.state.active.color}
                                 fontSize={20}
-                                dy={20}
+                                dy={-20}
                             >
-                                {`${this.state.active.amount} ${this.state.active.symbol} `}
+                                { (this.state.active.symbol === "Niñas")?
+                                
+                                    `${this.state.active.amount} Petite Fille `
+                                    :
+                                    `${this.state.active.amount} Petit Garçon `
+                                }
                             </Text>
 
                             <Text 
                                 textAnchor="middle" 
                                 fill={this.state.active.color} 
-                                fontSize={20} dy={+40}
+                                fontSize={20} dy={+20}
                             >
                                 {/* {`$${Math.floor(this.state.active.amount * this.state.active.inUSD)}`} */}
                                 {`${((this.state.active.amount/totalg)*100).toFixed(2)}%`}
@@ -118,17 +124,13 @@ class Chart extends React.Component
                     ) : (
                         <>
 
-                        {/* <Text textAnchor="middle" fill="#aaa" fontSize={20} dy={20}>
-                            {`${totalg} Participantes`}
-                        </Text> */}
-                            <Text textAnchor="middle" fill="#FF00CC" fontSize={20} dy={20}>
-                                {`${totalgirls} Niñas`}
-                            </Text>
+                        <Text textAnchor="middle" fill="#FF00CC" fontSize={20} dy={20}>
+                            {`${totalgirls} Petite Fille`}
+                        </Text>
 
-                            <Text textAnchor="middle" fill="#0000FF" fontSize={20} dy={-20}>
-                                {`${totalboys} Niños`}
-                            </Text>
-
+                        <Text textAnchor="middle" fill="#0000FF" fontSize={20} dy={-20}>
+                            {`${totalboys} Petit Garçon`}
+                        </Text>
                         </>
                     )}
                     </Group>
@@ -138,4 +140,4 @@ class Chart extends React.Component
                 }
 }
 
-export default Chart;
+export default ChartFr;

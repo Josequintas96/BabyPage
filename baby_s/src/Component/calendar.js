@@ -79,6 +79,7 @@ class Calendar extends React.Component
       calendar_run( maxUU)
       {
         const calendarX = this.state.calendar.sort((a, b) => b.votes > a.votes ? 1 : -1).slice(0,3)
+        
           return(
               <>
               {
@@ -125,14 +126,7 @@ class Calendar extends React.Component
             <div >
 
                 <div >
-                    {/* {this.state.calendar.map((calendar, idx) => (
-                        <ProgressBar key={idx} 
-                            bgcolor={this.renderSwitch(idx)} 
-                            completed={parseInt((calendar.votes/maxUU)*100)} 
-                            numb ={calendar.votes}
-                            idX={idx}
-                            date={calendar.birth}/>
-                    ))} */}
+                    
 
                     {this.calendar_run(maxUU)}
 
@@ -144,146 +138,3 @@ class Calendar extends React.Component
 }
 export default Calendar;
 
-
-
-            {/* {this.state.calendar.map((calendar, id) => (
-                <div key={id}>
-                    {id}
-
-                    <p style={{ display: "inline", fontWeight: "bold" }}>{calendar.birth}: &nbsp;</p>
-                    <div style={{ display: "inline-block", width: "70%", verticalAlign: "middle"}}>
-                        <HSBar height={50} showTextIn id="hsbarExample"
-                            data={[
-                                { value: maxUU, description: (calendar.votes + " votes"), color: 'rgba(0, 143, 251, 0.85)' },
-                                { value: (maxUU - calendar.votes), description: "Extended Available", color: "blue"}
-                            ]}
-                        />
-
-                    </div>
-                    <br/>
-
-
-
-                </div>
-                
-            ))} */}
-
-            // <table id="bar-example-6" class="charts-css bar show-labels">
-            //     <caption> Bar Example #6 </caption> 
-            //     <thead>
-            //         <tr>
-            //         <th scope="col"> Year </th> 
-            //         <th scope="col"> Progress </th>
-                        
-            //         </tr>
-            //     </thead> 
-            //     <tbody>
-            //         <tr>
-            //         <th scope="row"> 2216 </th> 
-            //         <td ></td>
-            //         </tr> 
-            //         <tr>
-            //         <th scope="row"> 2017 </th> 
-            //         <td ></td>
-            //         </tr> 
-            //         <tr>
-            //         <th scope="row"> 2018 </th> 
-            //         <td ></td>
-            //         </tr> 
-            //         <tr>
-            //         <th scope="row"> 2019 </th> 
-            //         <td ></td>
-            //         </tr> 
-            //         <tr>
-            //         <th scope="row"> 2020 </th> 
-            //         <td ></td>
-            //         </tr>
-            //     </tbody>
-            //     </table>
-
-            // {this.TableBody()}
-            {/* {this.state.calendar.map((calendar, id) => (
-                <div key={id}>
-                    {id}
-
-                    <p style={{ display: "inline", fontWeight: "bold" }}>{calendar.birth}: &nbsp;</p>
-                    <div style={{ display: "inline-block", width: "70%", verticalAlign: "middle"}}>
-                        <HSBar height={50} showTextIn id="hsbarExample"
-                            data={[
-                                { value: maxUU, description: (calendar.votes + " votes"), color: 'rgba(0, 143, 251, 0.85)' },
-                                { value: (maxUU - calendar.votes), description: "Extended Available", color: "blue"}
-                            ]}
-                        />
-
-                    </div>
-                    <br/>
-
-
-
-                </div>
-                
-            ))} */}
-
-
-            // <table id="bar-example-6" class="charts-css bar show-labels">
-            //     <caption> Bar Example #6 </caption> 
-            //     <thead>
-            //         <tr>
-            //         <th scope="col"> Year </th> 
-            //         <th scope="col"> Progress </th>
-                        
-            //         </tr>
-            //     </thead> 
-            //     <tbody>
-            //         <tr>
-            //         <th scope="row"> 2216 </th> 
-            //         <td ></td>
-            //         </tr> 
-            //         <tr>
-            //         <th scope="row"> 2017 </th> 
-            //         <td ></td>
-            //         </tr> 
-            //         <tr>
-            //         <th scope="row"> 2018 </th> 
-            //         <td ></td>
-            //         </tr> 
-            //         <tr>
-            //         <th scope="row"> 2019 </th> 
-            //         <td ></td>
-            //         </tr> 
-            //         <tr>
-            //         <th scope="row"> 2020 </th> 
-            //         <td ></td>
-            //         </tr>
-            //     </tbody>
-            //     </table>
-
-            // {this.TableBody()}
-
-
-             {/* <table id="bar-example-6" class="charts-css bar show-labels">
-                <tbody>
-
-                        {this.state.calendar.map((calendar, id) => (
-                            <tr key={id}>
-                                <th scope="row"> {id} </th> 
-                                <td style="--size: 1;">{calendar.votes} </td>
-                            </tr>
-                        
-                        ))}
-
-                </tbody>
-            </table> */}
-            
-
-            {/* <p style={{ display: "inline", fontWeight: "bold" }}>Comprehensive: &nbsp;</p>
-                    <div style={{ display: "inline-block", width: "70%", verticalAlign: "middle"}}>
-                        <HSBar height={50} showTextIn id="hsbarExample"
-                        data={[
-                            { value: 10000, description: "60 months / 60,000 miles", color: 'rgba(0, 143, 251, 0.85)' },
-                            { value: Math.floor(10000 / 3), description: "Extended Available", color: "yellow"}
-                        ]}
-                        />
-
-                    </div>
-            <br/> */}

@@ -9,6 +9,7 @@
     "@visx/react-spring": "^2.6.0",
     "@visx/visx": "^2.9.0",
     "axios": "^0.26.1",
+    "moment": "^2.29.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-horizontal-stacked-bar-chart": "^8.15.2",

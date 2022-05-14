@@ -96,6 +96,7 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     vertical-align: middle;
+    margin-bottom: 5px;;
 }
 
 .button-25:hover,

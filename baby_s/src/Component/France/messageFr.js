@@ -1,14 +1,23 @@
 import '../../css/message.css';
 import React from "react";
 import Chart from "../chart";
+import ChartFr from "../chartFr.js";
 import Result from "../Results";
-import Standart_p from '../standart_p'
+import Standart_p from '../standart_p';
 
+import Standart_p2 from '../standard_p2'
+import Calendar from '../calendar';
+
+//image
 import A_DOWN from "../../image/A-DOWN.png";
 import A_UP from "../../image/A-UP.png";
 
 
-//image
+
+
+
+
+
 
 class MesssageFr extends React.Component
 {
@@ -87,24 +96,29 @@ class MesssageFr extends React.Component
         return (
             <body class="controlBB">
 
-            <h1>
-                Babillard
+            <h1 class="message_title">
+                RESULTATS
             </h1>
 
             <section class='block_intro'>
                 {this.state.user ===null?
-                    (<p >
-                        Merci d'avoir participé à cette merveilleuse 
-                        expérience. Comme preuve de votre participation, 
-                        voici les résultats de votre participation.
-                        </p>)
+                    (   
+                        <>
+                            <p >
+                            Merci d’avoir participé ! 
+                            </p>
+                            <p>
+                             Il ne reste plus qu'à attendre 
+                            l'arrivée de bébé avec nous
+                            </p>
+                        </>
+                        )
                     :
                     (<p >
-                        Voici les participants et leurs souhaits à votre 
-                        personne; J'espère que leurs messages vous 
-                        parviendront sains et saufs et vous souhaite la 
-                        prospérité.
-                    </p>)
+                        Aqui estan los participantes y sus deseas 
+                        a tu persona; espero que sus mensajes te 
+                        lleguen sano y salvo y te deseeen prosperidad.
+                        </p>)
                     }
                 
             </section >
@@ -113,7 +127,7 @@ class MesssageFr extends React.Component
 
             {/* <button onclick={this.myFunction()}>Click Me</button> */}
             <div class="message_hidd">
-                <h2 class="title_mess"> Résultats</h2>
+                <h2 class="title_mess"> Quel est le sexe du bébé ?</h2>
                     {this.state.isHiddenGender?
                         (<img src={A_DOWN} class="mess_picture" onClick={() => this.gender_twist()}/>)
                         :
@@ -122,7 +136,7 @@ class MesssageFr extends React.Component
             </div>
 
             {this.state.isHiddenGender?
-                (<Chart  />)
+                (<ChartFr  />)
                 :
                 (<></>)
             }
@@ -130,7 +144,7 @@ class MesssageFr extends React.Component
             <section class="intro"></section>
 
             <div class="message_hidd">
-                    <h2 class="title_mess">Calendrier</h2>
+                    <h2 class="title_mess">Les dates les plus votées :</h2>
                     
                     {this.state.isHiddenCalendar?
                         (<img src={A_DOWN} class="mess_picture" onClick={() => this.calendar_twist()}/>)
@@ -139,15 +153,24 @@ class MesssageFr extends React.Component
                     } 
             </div>
 
+            {this.state.isHiddenCalendar?
+                (<div >
+                    <Calendar  />
+                </div>)
+                :
+                (<></>)
+            }
+            
+
             <section class="intro"></section>
              
             {/* <Chart  /> */}
             
             <div class="message_hidd">
                     {this.state.user ===null?
-                    (<h2 class="title_mess">Intervenants</h2>)
+                    (<h2 class="title_mess">Participants</h2>)
                     :
-                    (<h2 class="title_mess">Des postes</h2>)
+                    (<h2 class="title_mess">Mensajes</h2>)
                     }
                     
                     {this.state.isHiddenMessage?
@@ -161,7 +184,7 @@ class MesssageFr extends React.Component
             {this.state.user === null?
                 (<>
                     {this.state.isHiddenMessage?
-                    (<Standart_p />)
+                    (<Standart_p2 />)
                     :
                     (<></>)
                     } 
@@ -175,18 +198,9 @@ class MesssageFr extends React.Component
                     } 
                 </>)}
             
-            {/* <Result/> */}
 
             
             <section class="intro"></section>
-
-            <br class="space_div"/>
-
-            <footer class="footer">
-
-            </footer>
-
-
             </body>
             
         );
@@ -194,3 +208,4 @@ class MesssageFr extends React.Component
 }
 
 export default MesssageFr;
+

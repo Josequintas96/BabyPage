@@ -2,15 +2,23 @@ import '../../css/message.css';
 import React from "react";
 import Chart from "../chart";
 import Result from "../Results";
-import Standart_p from '../standart_p'
+import Standart_p from '../standart_p';
 
+import Standart_p2 from '../standard_p2'
+import Calendar from '../calendar';
+
+//image
 import A_DOWN from "../../image/A-DOWN.png";
 import A_UP from "../../image/A-UP.png";
 
 
-//image
 
-class MesssageSp extends React.Component
+
+
+
+
+
+class MessageSp extends React.Component
 {
     state = {
         isHiddenGender: false,
@@ -87,23 +95,21 @@ class MesssageSp extends React.Component
         return (
             <body class="controlBB">
 
-            <h1>
-                Tablero de Mensajes
+            <h1 class="message_title">
+                Resultados
             </h1>
 
             <section class='block_intro'>
                 {this.state.user ===null?
                     (<p >
-                        Gracias por participar en esta
-                        maravillosa experiencia;
-                        Como prueba de su participacion, 
-                        aqui estan los resultados de
-                        su participacion.
+                        Gracias por haber participado ! Ya no queda 
+                        de otra que esperar con nosotros que el bebé nazca
                         </p>)
                     :
                     (<p >
-                        Aqui estaan los participantes y sus deseas a tu persona; 
-                        espero que sus mensajes te lleguen sano y salvo y te deseeen prosperidad.
+                        Aqui estan los participantes y sus deseas 
+                        a tu persona; espero que sus mensajes te 
+                        lleguen sano y salvo y te deseen prosperidad.
                         </p>)
                     }
                 
@@ -113,7 +119,7 @@ class MesssageSp extends React.Component
 
             {/* <button onclick={this.myFunction()}>Click Me</button> */}
             <div class="message_hidd">
-                <h2 class="title_mess"> Resultados</h2>
+                <h2 class="title_mess"> ¿ Cuál es el sexo del bebé ?</h2>
                     {this.state.isHiddenGender?
                         (<img src={A_DOWN} class="mess_picture" onClick={() => this.gender_twist()}/>)
                         :
@@ -130,7 +136,7 @@ class MesssageSp extends React.Component
             <section class="intro"></section>
 
             <div class="message_hidd">
-                    <h2 class="title_mess">Calendario</h2>
+                    <h2 class="title_mess"> Fecha más votada :</h2>
                     
                     {this.state.isHiddenCalendar?
                         (<img src={A_DOWN} class="mess_picture" onClick={() => this.calendar_twist()}/>)
@@ -138,6 +144,15 @@ class MesssageSp extends React.Component
                         (<img src={A_UP} class="mess_picture" onClick={() => this.calendar_twist()}/>)
                     } 
             </div>
+
+            {this.state.isHiddenCalendar?
+                (<div >
+                    <Calendar  />
+                </div>)
+                :
+                (<></>)
+            }
+            
 
             <section class="intro"></section>
              
@@ -161,7 +176,7 @@ class MesssageSp extends React.Component
             {this.state.user === null?
                 (<>
                     {this.state.isHiddenMessage?
-                    (<Standart_p />)
+                    (<Standart_p2 />)
                     :
                     (<></>)
                     } 
@@ -175,16 +190,11 @@ class MesssageSp extends React.Component
                     } 
                 </>)}
             
-            {/* <Result/> */}
 
             
             <section class="intro"></section>
 
-            <br class="space_div"/>
-
-            <footer class="footer">
-
-            </footer>
+           
 
 
             </body>
@@ -193,4 +203,5 @@ class MesssageSp extends React.Component
     }
 }
 
-export default MesssageSp;
+export default MessageSp;
+

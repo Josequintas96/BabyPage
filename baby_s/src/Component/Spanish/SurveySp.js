@@ -51,21 +51,22 @@ class SurveySp extends React.Component
   return (
     <body class="controlBB">
 
-      <h1 calss='Surveyh1'>
-        En un futuro incierto; que esperan en Gaby & Val futuro Bebe?
+      <h1 class='Surveyh1'>
+          !! QUE COMIENCEN LAS APUESTAS !!
       </h1>
 
       <section class="stage">
           <section class="stage_p">
                 <p>
                 Por aquí pueden votar por el sexo del bebé, 
-                decirnos si piensas que nacerá otro día que 
-                el día previsto ( 5 de julio) y dejarnos un 
-                mensaje para crear el libro de oro de bebe ! 
+                decirnos si piensan que nacerá otro día que 
+                el día previsto (según los “expertos” el 5
+                 de julio) y dejarnos un mensaje para crear 
+                 el libro de oro de bebé ! 
 
                 </p>
                 <p>
-                    Gracias! 
+                    ! Gracias ! 
                 </p>
                 <p>
                     Gaby y Val
@@ -102,7 +103,7 @@ class SurveySp extends React.Component
 
 
 
-        <label for="fname" class="survey_left" > Cual es el sexo del bebé ?:</label>
+        <label for="fname" class="survey_left" >¿Cuàl es el sexo del bebé ?:</label>
         <div class= "survey_rigth">
           <select name="gender" 
                   value={this.state.gender} 
@@ -118,7 +119,7 @@ class SurveySp extends React.Component
         <br />
 
         <label for="fname" class="survey_left">
-        La fecha prevista es el 5 de julio, que fecha crees que nacerá ?:
+        La fecha prevista es el 5 de julio. ¿ En qué fecha crees que nacerá ?:
         </label>
         <div class= "survey_rigth">
             <input type="date" id="mayborn" name="birth" 
@@ -175,13 +176,6 @@ class SurveySp extends React.Component
      
 
       <section class="intro"></section>
-
-
-      <section>
-          {/* <img  src= "https://global-uploads.webflow.com/61832088cc97eb577fc81c35/61832088cc97eb139cc8201d_61516ba9589fb6822bd4a7c9_thankyou__FillWzcwMCw0NDBd.jpeg"
-        style="width:350px;height:200px;" /> */}
-        
-      </section>
 
 
       <footer class="footer">

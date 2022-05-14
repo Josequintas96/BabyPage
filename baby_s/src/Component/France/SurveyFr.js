@@ -51,20 +51,17 @@ class SurveyFr extends React.Component
   return (
     <body class="controlBB">
 
-      <h1 calss='Surveyh1'>
-        Gaby & Val Questionnaire de leur mystérieux bébé
+      <h1 class='Surveyh1'>
+        A VOS VOTES!
       </h1>
 
-      
-
       <section class="stage">
-        <div class="stage_p">
-                    <p>
-                    Ici vous pouvez voter pour le sexe du bébé, nous 
-                    dire si vous pensez qu'il naîtra un autre jour que 
-                    le jour prévu (5 juillet) et nous laisser un message 
-                    pour créer le livre d'or du bébé !
-
+          <section class="stage_p">
+                <p>
+                Ici vous pouvez voter pour le sexe du bébé,
+                la date de naissance (prévue par les « experts
+                 » le 5 juillet) et nous laisser un message pour 
+                le livre d'or du bébé ! 
                 </p>
                 <p>
                     Merci! 
@@ -72,26 +69,27 @@ class SurveyFr extends React.Component
                 <p>
                     Gaby et Val
                 </p>
-          </div>
-          
+          </section>
 
-          <img src ={Gaby_belly} class="stage_img"/>
-
+          <img src ={Gaby_belly}  class="stage_img"/>
+            
       </section>
+
+     
 
       <section class="intro">
       </section>
 
-    <section class="stage">
+    <section class="stage st0">
 
       <br class="space_div"/>
       <form action="/action_page.php" onSubmit={this.handleSubmit}>
         
         
-        <label for="fname" class="survey_left">Nom du participant:</label>
+        <label for="fname" class="survey_left">Prénom du participant :</label>
         <div class= "survey_rigth">
           <input type="text" id="fname" 
-                placeholder="Nombre"
+                placeholder="PRENOM"
                 value={this.state.name} name="name"
                 maxlength="30"
                 onChange={this.handleInput} 
@@ -103,15 +101,15 @@ class SurveyFr extends React.Component
 
 
 
-        <label for="fname" class="survey_left" > Quel est le sexe du bébé ? :</label>
+        <label for="fname" class="survey_left" > Quel est le sexe du bébé ?:</label>
         <div class= "survey_rigth">
           <select name="gender" 
                   value={this.state.gender} 
                   onChange={this.handleInput}
                   class= "survey_rigth_i">
-                  <option value="none" selected="null">Le sexe</option>
-                  <option value="M">Petit garçon</option>
-                  <option value="F">Fille</option>
+                  <option value="none" selected="null">SEXE</option>
+                  <option value="M">Petit Garçon</option>
+                  <option value="F">Petite Fille</option>
               </select>
 
         </div>
@@ -119,7 +117,7 @@ class SurveyFr extends React.Component
         <br />
 
         <label for="fname" class="survey_left">
-        La date prévue est le 5 juillet, à quelle date pensez-vous qu'il va naître ? :
+        La date prévue est le 5 juillet, à quelle date pensez-vous qu'il va naître ?
         </label>
         <div class= "survey_rigth">
             <input type="date" id="mayborn" name="birth" 
@@ -133,19 +131,19 @@ class SurveyFr extends React.Component
 
 
         <label for="fname" class="survey_left">
-            Laissez-nous votre message pour le baby gold book :
+        Laissez-nous votre message pour le livre d’or du bébé :
         </label>
         <textarea id="w3review" name="message"  rows="4" cols="50" 
                     value={this.state.message} 
                     onChange={this.handleInput}
-                    placeholder="Escribe tu mensaje aqui."
+                    placeholder="Ecrivez par ici…"
                     class= "survey_rigth_iX">
             
           </textarea>
           
       { this.state.error_occur ? 
-        (<div class="survey_error" > Veuillez vérifier vos données; 
-        vous manquez ou avez mal écrit l'une des exigences </div>)
+        (<div class="survey_error" > Porfavor revisa tus datos; te falta o has escrito 
+        incorectamente uno de los requerimientos </div>)
         :
         (<></>)
       }
@@ -157,16 +155,16 @@ class SurveyFr extends React.Component
         <button type="submit" 
           class = "button-25">
           {/*  class="survey_bottom"> */}
-            Enviar
+            ENVOYER
         </button>
         <button type="Reset" 
           class = "button-25">
             {/* class="survey_bottom"> */}
-            Resetear
+            EFFACER ET RECOMMENCER
         </button>
 
         {/* <input type="Reset" value="Resetear" /> */}
-
+        
       </form> 
 
       <br class="space_div"/>
@@ -176,13 +174,6 @@ class SurveyFr extends React.Component
      
 
       <section class="intro"></section>
-
-
-      <section>
-          {/* <img  src= "https://global-uploads.webflow.com/61832088cc97eb577fc81c35/61832088cc97eb139cc8201d_61516ba9589fb6822bd4a7c9_thankyou__FillWzcwMCw0NDBd.jpeg"
-        style="width:350px;height:200px;" /> */}
-        
-      </section>
 
 
       <footer class="footer">

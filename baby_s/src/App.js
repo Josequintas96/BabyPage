@@ -52,23 +52,30 @@ class App extends React.Component
                             <Route path='/' exact element={<Dashboard   />} />
                             
                             {/* <Route path='/Intro_F' exact element={<Intro_F  />} /> */}
-                            <Route exact path="/results" element={<Results/>} />
                             <Route exact path="/survey" element={<Survey />} />
-                            <Route exact path="/control" element={<Control />} />
-                            <Route exact path='/chart' element={<Chart />} />
                             <Route exact path='/message' element={<Message />} />
+
+                            {/* User admin control urls */}
                             <Route exact path='/Signup' element={<Signup />} />
                             <Route exact path='/New_user' element={<New_user />} />
                             <Route exact path='/Login' element={<Login />} />
                             <Route exact path='/Logout' element={<Logout />} />
-                            {/* <Route exact path='/Dashboard' element={<Dashboard />} /> */}
-                            <Route exact path='/SurveyA' element={<SurveyA />} />
-                            <Route exact path='/chartA' element={<ChartA />} />
-                            <Route exact path='/Timer' element={<Timer />} />
                             <Route exact path='/eraser' element={<Eraser />} />
-                            <Route exact path='/calendar' element={<Calendar />} />
-                            <Route exact path='/standard' element={<Standart_p />} />
+                            {/* <Route exact path='/Dashboard' element={<Dashboard />} /> */}
+                            
                             {/* <Route exact path="/survey" render={(props) => (<Search Input={this.state.search_for} search_F={this.handleSearch} /> )} /> */}
+                            {/*
+                              Useless Url
+                                  <Route exact path="/results" element={<Results/>} />
+                                  <Route exact path="/control" element={<Control />} />
+                                  <Route exact path='/SurveyA' element={<SurveyA />} />
+                                  <Route exact path='/chartA' element={<ChartA />} />
+                                  <Route exact path='/Timer' element={<Timer />} />
+                                  <Route exact path='/calendar' element={<Calendar />} />
+                                  <Route exact path='/standard' element={<Standart_p />} />
+                                  <Route exact path='/chart' element={<Chart />} />
+                            */}
+
                             <Route path="/*" element={<NotFound />} />
                           {/* </Switch> */}
                       </Routes>
