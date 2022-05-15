@@ -3,9 +3,7 @@ import './Nav.css';
 
 
 import React, { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
 
-import axios from 'axios';
 
 //image
 import Ven from "../image/icons_flag/venezuela.png";
@@ -30,11 +28,6 @@ const Nav = () => {
       
     }, []);
 
-    function linktohome() {
-        
-            window.location.href = "/";
-
-          };
 
     function Spanish_token()
     {
@@ -58,37 +51,20 @@ const Nav = () => {
                 <div class="NavR">
                   {isAuth === true ?
                       (<Link to="/" class="NavR2" > 
-                        <img src={Wedding} class="NavImg" />
+                        <img src={Wedding} class="NavImg"  alt="wedding" />
                       </Link>):
                       (<>
                         <Link to="/" class="NavR2" >
-                          <img src={baby} class="NavImg" description="cambia lenguaje"  />
+                          <img src={baby} class="NavImg" description="cambia lenguaje" alt="baby" />
                         </Link>
                       </>)
                   }
                 </div>
 
                 <div class="NavL">
-                  <img src={Ven} class="NavImg" onClick={() => Spanish_token()}/>
-                  <img src={France} class="NavImg" onClick={() => France_token()} />
+                  <img src={Ven} class="NavImg"  alt="Ven_flag"   onClick={() => Spanish_token()}/>
+                  <img src={France} class="NavImg" alt="France_flag" onClick={() => France_token()} />
                 </div>
-
-                {/* <img src={Wedding} class="NavImg" />
-                 */}
-                
-
-{/*       
-              
-
-
-              <div class="NavL">
-              
-                <img src={Ven} class="NavImg" onClick={() => Spanish_token()}/>
-                <img src={France} class="NavImg" onClick={() => France_token()} />
-                
-              </div> */}
-
-              
 
 
           </section>

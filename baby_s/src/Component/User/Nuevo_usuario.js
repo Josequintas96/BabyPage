@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import "../ExtraCss/login.css"
+import "../../ExtraCss/login.css"
 
 const New_user = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
   const [password1, setPassword1] = useState('');
   const [password2, setPassword2] = useState('');
   const [errors, setErrors] = useState(false);
@@ -110,6 +109,7 @@ const New_user = () => {
             />{' '}
             
             <br class="login_space" />
+
             <input type='submit' value='Nuevo Usuario'
               class="button-24" />
           </form>

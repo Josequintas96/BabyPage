@@ -1,5 +1,4 @@
 import React, { useState, useEffect, Fragment } from 'react';
-import Navbar from './Nav2';
 import "../ExtraCss/login.css"
 
 const Logout = () => {
@@ -41,7 +40,6 @@ const Logout = () => {
 
   return (
     <div>
-      {/* <Navbar/> */}
       <div class="login_box">
       {loading === false && (
         <Fragment>

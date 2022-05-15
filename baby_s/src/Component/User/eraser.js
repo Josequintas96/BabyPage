@@ -1,10 +1,10 @@
-import '../css/Survey.css';
+import '../../css/Survey.css';
 import React from "react";
 import axios from 'axios';
 
-import Result from "./Results";
-import A_DOWN from "../image/A-DOWN.png";
-import A_UP from "../image/A-UP.png";
+import Result from "../Results";
+import A_DOWN from "../../image/A-DOWN.png";
+import A_UP from "../../image/A-UP.png";
 
 class Eraser extends React.Component
 {

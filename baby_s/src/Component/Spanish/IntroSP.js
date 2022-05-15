@@ -34,10 +34,10 @@ function IntroSP() {
         <section class="Intro_section_c">
             <p >
             Los invitamos a participar en nuestra aventura 
-            de ser padres intentando adivinar el sexo de bebé 
+            de ser padres intentando adivinar el sexo del bebé 
             y la fecha de nacimiento!
             Además, nos pueden dejar un mensaje para el libro 
-            de oro de bebé !
+            de oro del bebé !
             </p>
 
             <a href='/survey'>

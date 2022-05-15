@@ -1,5 +1,4 @@
 import "../css/calendar.css";
-import numb1 from "../image/icons_control/number_1.png";
 import medal1 from "../image/icons_control/medal1.png";
 import medal2 from "../image/icons_control/medal2.png";
 import medal3 from "../image/icons_control/medal3.png";
@@ -32,11 +31,7 @@ const ProgressBar = (props) => {
       // textAlign: 'center',
     }
     
-    // const labelStyles = {
-    //   padding: 125,
-    //   color: 'white',
-    //   fontWeight: 'bold'
-    // }
+    
   
     return (
       <section class="calendar_cont">
@@ -45,7 +40,7 @@ const ProgressBar = (props) => {
                   <div class={"bar_rank "+ "sp_"+props.idX}>
                     <img src={renderSwitch(props.idX)} class="bar_img" />
                     <scan class="bar_spX">
-                        {Moment(props.date).format('d MMM')}
+                        {Moment(props.date).format('DD MMM')}
                     </scan>
                     
                   </div>              

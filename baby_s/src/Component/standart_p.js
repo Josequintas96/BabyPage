@@ -5,9 +5,6 @@ import React from "react";
 import axios from 'axios';
 
 //image
-import Male_baby from "../image/son.png";
-import Female_baby from "../image/daughter.png";
-import Question from "../image/question.png";
 
 class Standart_p extends React.Component
 {

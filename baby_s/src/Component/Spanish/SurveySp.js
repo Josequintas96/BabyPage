@@ -1,16 +1,39 @@
 import '../../css/Survey.css';
 import React from "react";
 import axios from 'axios';
-
-
+import { Modal, Button } from 'react-bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Gaby_belly from "../../image/gaby_photo/gaby_pregnant2.jpeg";
+// import DatePicker from "react-datepicker";
+
+
+
+const ModalC = () => {
+  return (
+    <>
+      <div class="darkBG" />
+      <div class="centered">
+        <div class="modal">
+          <h1 class="modalContent">
+            Gracias por participar!!! Espere a que mensaje se envie
+          </h1>
+        </div>
+      </div>
+    </>
+  );
+};
 
 class SurveySp extends React.Component
 {
   state = {
     details: [],
     error_occur: false,
+    isOpen: false,
   };
+
+  // [show, setShow] = useState(false);
+
+  setIsOpen = (val) => this.setState({isOpen: val});
 
  
     handleInput = (e) => {
@@ -18,6 +41,14 @@ class SurveySp extends React.Component
           // error_occur: false,
           [e.target.name]: e.target.value,
       });
+    };
+
+    handlesubmitControl = (e) =>
+    {
+      e.preventDefault();
+      this.setIsOpen(true);
+      this.handleSubmit(e);
+
     };
 
     handleSubmit = (e) => {
@@ -44,12 +75,20 @@ class SurveySp extends React.Component
               error_occur: true,
             })
             console.log("ERROR SUPERMAN")
+            this.setIsOpen(false);
           });
     };
+
+// Modal design
+
+
+
 
   render(){
   return (
     <body class="controlBB">
+
+
 
       <h1 class='Surveyh1'>
           !! QUE COMIENCEN LAS APUESTAS !!
@@ -61,8 +100,8 @@ class SurveySp extends React.Component
                 Por aquí pueden votar por el sexo del bebé, 
                 decirnos si piensan que nacerá otro día que 
                 el día previsto (según los “expertos” el 5
-                 de julio) y dejarnos un mensaje para crear 
-                 el libro de oro de bebé ! 
+                de julio) y dejarnos un mensaje para crear 
+                el libro de oro del bebé ! 
 
                 </p>
                 <p>
@@ -77,6 +116,8 @@ class SurveySp extends React.Component
             
       </section>
 
+
+      
      
 
       <section class="intro">
@@ -85,7 +126,7 @@ class SurveySp extends React.Component
     <section class="stage st0">
 
       <br class="space_div"/>
-      <form action="/action_page.php" onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handlesubmitControl} >
         
         
         <label for="fname" class="survey_left">Nombre del participante:</label>
@@ -103,7 +144,7 @@ class SurveySp extends React.Component
 
 
 
-        <label for="fname" class="survey_left" >¿Cuàl es el sexo del bebé ?:</label>
+        <label for="fname" class="survey_left" >Cuàl es el sexo del bebé ?:</label>
         <div class= "survey_rigth">
           <select name="gender" 
                   value={this.state.gender} 
@@ -119,21 +160,30 @@ class SurveySp extends React.Component
         <br />
 
         <label for="fname" class="survey_left">
-        La fecha prevista es el 5 de julio. ¿ En qué fecha crees que nacerá ?:
+        La fecha prevista es el 5 de julio. En qué fecha crees que nacerá ?:
         </label>
         <div class= "survey_rigth">
             <input type="date" id="mayborn" name="birth" 
                   value={this.state.birth} 
                   onChange={this.handleInput}
-                  min="2022-05-01"
+                  min="2022-06-01"
+                  max="2022-08-30"
                   class= "survey_rigth_i"/>
+            {/* <DatePicker
+                  selected={this.state.birth}
+                  
+                  onChange={this.handleInput}
+                  minDate={new Date("02-01-2020")}
+                  maxDate={new Date("02-29-2020")}
+                  placeholderText="Select a date in February 2020"
+              /> */}
         </div>
-          <br />
+        <br />
 
 
 
         <label for="fname" class="survey_left">
-            Déjanos tu mensaje para el libro de oro de bebé:
+            Déjanos tu mensaje para el libro de oro del bebé:
         </label>
         <textarea id="w3review" name="message"  rows="4" cols="50" 
                     value={this.state.message} 
@@ -172,15 +222,26 @@ class SurveySp extends React.Component
       <br class="space_div"/>
       </section>
 
+      {/* <button className="primaryBtn" onClick={() => this.setIsOpen()}>
+        Open Modal
+      </button> */}
+      
+      {this.state.isOpen && <ModalC />}
 
      
 
       <section class="intro"></section>
 
+      
+{/* 
+<input type="date" id="mayborn" name="birth" 
+                  value={this.state.birth} 
+                  onChange={this.handleInput}
+                  min="2022-05-01"
+                  class= "survey_rigth_i"/> */}
 
-      <footer class="footer">
 
-      </footer>
+      
 
 
     </body>

@@ -226,8 +226,9 @@
         justify-content: center;
         /* background-color: black; */
         
-        width: 150px;
-        height: 150px;
+        /*initial 150 */
+        width: 130px;
+        height: 130px;
         margin-right: 5px;
         margin-bottom: 30px;
     }
@@ -260,13 +261,15 @@
         text-align: middle;
         margin-left: 3px;
         margin-right: 4px;
-        font-size: 100px;
+        /*initialy: 100*/
+        font-size: 80px;
     }
 
     .Timer_h1
     {
-        font-size: 85px;
-        margin-top: 5%;
+        /*initialy: 85, 5*/
+        font-size: 65px;
+        margin-top: 15%;
         margin-bottom: 0px;
         vertical-align: top;
     }

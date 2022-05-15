@@ -1,6 +1,8 @@
 .message_title
 {
     background-color: white;
+    display: inline-block;
+    width: 60%;
 }
 
 .message_hidd
@@ -59,7 +61,15 @@
 
 @media only screen and (max-width: 767px) {
     .title_mess {
-        width: 50%;
+        float: left;
+        width: 70%;
         font-size: 20px;
     }
+
+    .mess_picture
+    {
+        float: right;
+    }
+
+
   }

@@ -51,9 +51,9 @@ class ChartFr extends React.Component
         (this.state.gender.reduce((totalg,currentItem) =>  totalg = totalg + currentItem.amount , 0 ));
 
         const totalgirls = 
-        (this.state.gender.reduce((totalgirls,currentItem) =>  (currentItem.symbol === "Niñas")?  totalgirls = totalgirls + currentItem.amount : totalgirls = 0, 0 ));
+        (this.state.gender.reduce((totalgirls,currentItem) =>  (currentItem.symbol === "Niñas")?  totalgirls = totalgirls + currentItem.amount : totalgirls = totalgirls+ 0, 0 ));
         const totalboys= 
-        (this.state.gender.reduce((totalboys,currentItem) =>  (currentItem.symbol === "Niños")?  totalboys = totalgirls + currentItem.amount : totalboys = 0, 0 ));
+        (this.state.gender.reduce((totalboys,currentItem) =>  (currentItem.symbol === "Niños")?  totalboys = totalboys + currentItem.amount : totalboys = totalboys + 0, 0 ));
             return (
                 <main class="controlBC">
                     {console.log("Special count",  this.state.gender)}

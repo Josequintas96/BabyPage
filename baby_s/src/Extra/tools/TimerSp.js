@@ -1,14 +1,6 @@
 import '../Nav.css';
 
 import React, { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
-
-import axios from 'axios';
-
-//image
-import { Link } from 'react-router-dom';
-
-
 
 
 
@@ -38,7 +30,6 @@ const Timer = () => {
 
 
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-    const [numb, setNumb] = useState(1);
 
 
     useEffect(() => {
@@ -75,9 +66,6 @@ const Timer = () => {
 
     );
     });
-
-    
-
   
         return (
           <section class="Timer"   >

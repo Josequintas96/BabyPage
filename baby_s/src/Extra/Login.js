@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './Nav2'
 import "../ExtraCss/login.css"
 
 const Login = () => {
@@ -54,7 +53,6 @@ const Login = () => {
   return (
     <div>
       <div class="login_box">
-      {/* <Navbar/> */}
       {loading === false && <h1>Iniciar sesión</h1>}
       {errors === true && <section class="error_log"><h2 class="error_text">La información dadá no es correcta</h2></section>}
       {loading === false && (

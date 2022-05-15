@@ -7,7 +7,6 @@ import axios from 'axios';
 //image
 import Male_baby from "../image/son.png";
 import Female_baby from "../image/daughter.png";
-import Question from "../image/question.png";
 
 class Standart_p2 extends React.Component
 {
@@ -56,6 +55,15 @@ class Standart_p2 extends React.Component
       }
   };
 
+        rendeGender = (param) => {
+          if (param === "M") {
+                    return Male_baby;
+          }
+          else if (param === "F"){
+            return Female_baby;
+          }
+          };
+
   handleChange(event) 
   {
     this.setState({search:  event.target.value});
@@ -77,12 +85,16 @@ class Standart_p2 extends React.Component
 					
                 <div class="standard_">
                     <div class={"standard_id "+this.renderSwitch(id)}>
-                            {id}
+                            {id+1}
                     </div>
 
                     <div class={"standard_name "+this.renderSwitch(id)}>
                         {detail.name}
                     </div>
+
+                    <img src= {this.rendeGender(detail.gender)}  class={"standard_img "+this.renderSwitch(id)} />
+                       
+                    
                      
                 </div>
               ))}

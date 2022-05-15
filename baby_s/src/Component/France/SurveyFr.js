@@ -5,12 +5,32 @@ import axios from 'axios';
 
 import Gaby_belly from "../../image/gaby_photo/gaby_pregnant2.jpeg";
 
+const ModalC = () => {
+  return (
+    <>
+      <div class="darkBG" />
+      <div class="centered">
+        <div class="modal">
+          <h1 class="modalContent">
+              Merci de votre participation!!! Attendez que le message soit envoyé
+          </h1>
+        </div>
+      </div>
+    </>
+  );
+};
+
 class SurveyFr extends React.Component
 {
   state = {
     details: [],
     error_occur: false,
+    isOpen: false,
   };
+
+  // [show, setShow] = useState(false);
+
+  setIsOpen = (val) => this.setState({isOpen: val});
 
  
     handleInput = (e) => {
@@ -18,6 +38,14 @@ class SurveyFr extends React.Component
           // error_occur: false,
           [e.target.name]: e.target.value,
       });
+    };
+
+    handlesubmitControl = (e) =>
+    {
+      e.preventDefault();
+      this.setIsOpen(true);
+      this.handleSubmit(e);
+
     };
 
     handleSubmit = (e) => {
@@ -37,13 +65,16 @@ class SurveyFr extends React.Component
 				          birth: "",
 			            message: "",
               });
+              
               window.location.replace('/');
           })
           .catch((err) => {
             this.setState({
               error_occur: true,
             })
-            console.log("ERROR SUPERMAN")
+            console.log("ERROR SUPERMAN");
+            this.setIsOpen(false);
+
           });
     };
 
@@ -83,9 +114,9 @@ class SurveyFr extends React.Component
     <section class="stage st0">
 
       <br class="space_div"/>
-      <form action="/action_page.php" onSubmit={this.handleSubmit}>
+      <form  onSubmit={this.handlesubmitControl}>
         
-        
+      {/* action="/action_page.php" */}
         <label for="fname" class="survey_left">Prénom du participant :</label>
         <div class= "survey_rigth">
           <input type="text" id="fname" 
@@ -123,7 +154,8 @@ class SurveyFr extends React.Component
             <input type="date" id="mayborn" name="birth" 
                   value={this.state.birth} 
                   onChange={this.handleInput}
-                  min="2022-05-01"
+                  min="2022-06-01"
+                  max="2022-08-30"
                   class= "survey_rigth_i"/>
         </div>
           <br />
@@ -170,15 +202,9 @@ class SurveyFr extends React.Component
       <br class="space_div"/>
       </section>
 
-
-     
-
       <section class="intro"></section>
 
-
-      <footer class="footer">
-
-      </footer>
+      {this.state.isOpen && <ModalC />}
 
 
     </body>

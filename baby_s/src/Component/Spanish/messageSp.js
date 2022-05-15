@@ -119,7 +119,7 @@ class MessageSp extends React.Component
 
             {/* <button onclick={this.myFunction()}>Click Me</button> */}
             <div class="message_hidd">
-                <h2 class="title_mess"> ¿ Cuál es el sexo del bebé ?</h2>
+                <h2 class="title_mess"> Cuál es el sexo del bebé ?</h2>
                     {this.state.isHiddenGender?
                         (<img src={A_DOWN} class="mess_picture" onClick={() => this.gender_twist()}/>)
                         :

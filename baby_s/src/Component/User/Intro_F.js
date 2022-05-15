@@ -1,14 +1,13 @@
-import '../css/Intro.css';
+import '../../css/Intro.css';
 
 //image
-import Survey_image from '../image/survey.png';
-import Message_image from '../image/messages.png';
-import Eraser_image from '../image/eraser.png';
-import Setting_image from '../image/settings.png';
-import Timer from '../Extra/Timer';
+import Survey_image from '../../image/survey.png';
+import Message_image from '../../image/messages.png';
+import Eraser_image from '../../image/eraser.png';
+import Setting_image from '../../image/settings.png';
+import Timer from '../../Extra/Timer';
 
-import Welcome_X from '../image/Welcome.png';
-import Exit_image from '../image/exit.png';
+import Exit_image from '../../image/exit.png';
 
 function Intro_F() {
   return (

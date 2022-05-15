@@ -31,6 +31,12 @@ Link:
     =>https://adrianmoreno.com/2020/11/15/get-homebrew-working-with-macos-11-big-sur.html
     =>https://programmingwithmosh.com/react/localstorage-react/
 
+    =>https://blog.logrocket.com/4-ways-to-render-large-lists-in-react/
+    =>https://www.geeksforgeeks.org/how-to-implement-barchart-in-reactjs/
+    =>buttton css
+        https://getcssscan.com/css-buttons-examples
+    =>
+
 video
     =>https://www.youtube.com/watch?v=GMbVzl_aLxM
     =>https://www.youtube.com/watch?v=6DI_7Zja8Zc
@@ -40,6 +46,9 @@ video
     =>https://www.youtube.com/watch?v=r0ECufCyyyw&list=RDCMUCRM1gWNTDx0SHIqUJygD-kQ&index=5
     =>https://www.youtube.com/watch?v=r0ECufCyyyw&list=RDCMUCRM1gWNTDx0SHIqUJygD-kQ&index=7
     =>https://www.youtube.com/watch?v=P0Fz4V9G1G0&t=376s
+
+    =>https://www.youtube.com/watch?v=iK_aJ1g7aFg
+
 
 
 Conbtrol_Firebase:

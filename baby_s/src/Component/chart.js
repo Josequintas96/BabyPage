@@ -50,9 +50,9 @@ class Chart extends React.Component
 
         const totalgirls = 
             (this.state.gender.reduce((totalgirls,currentItem) =>  
-            (currentItem.symbol === "Niñas")?  totalgirls = totalgirls + currentItem.amount : totalgirls = 0, 0 ));
+            (currentItem.symbol === "Niñas")?  totalgirls = totalgirls + currentItem.amount : totalgirls = totalgirls+ 0, 0 ));
         const totalboys= 
-        (this.state.gender.reduce((totalboys,currentItem) =>  (currentItem.symbol === "Niños")?  totalboys = totalgirls + currentItem.amount : totalboys = 0, 0 ));
+        (this.state.gender.reduce((totalboys,currentItem) =>  (currentItem.symbol === "Niños")?  totalboys = totalboys + currentItem.amount : totalboys = totalboys + 0, 0 ));
             return (
                 <main class="controlBC">
                     {console.log("Special count",  this.state.gender)}
@@ -91,16 +91,15 @@ class Chart extends React.Component
                     {this.state.active ? (
                         <>
                         
-                            <Text textAnchor="middle" fill="#fff" fontSize={40} dy={-20}>
-                                {/* {`$${Math.floor(this.state.active.amount * this.state.active.inUSD)}`} */}
+                            {/* <Text textAnchor="middle" fill="#fff" fontSize={40} dy={-20}>
                                 {`$${Math.floor(this.state.active.amount )}`}
-                            </Text>
+                            </Text> */}
 
                             <Text
                                 textAnchor="middle"
                                 fill={this.state.active.color}
                                 fontSize={20}
-                                dy={20}
+                                dy={-20}
                             >
                                 {`${this.state.active.amount} ${this.state.active.symbol} `}
                             </Text>
@@ -108,7 +107,7 @@ class Chart extends React.Component
                             <Text 
                                 textAnchor="middle" 
                                 fill={this.state.active.color} 
-                                fontSize={20} dy={+40}
+                                fontSize={20} dy={+20}
                             >
                                 {/* {`$${Math.floor(this.state.active.amount * this.state.active.inUSD)}`} */}
                                 {`${((this.state.active.amount/totalg)*100).toFixed(2)}%`}

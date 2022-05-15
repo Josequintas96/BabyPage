@@ -11,7 +11,6 @@ import { BrowserRouter as Router, Routes, Route,  } from 'react-router-dom';
 import Results from "./Component/Results";
 import Intro from "./Component/Intro";
 import Survey from './Component/Survey';
-import SurveyA from './Component/SurveyAlternative';
 
 import Control from './Component/controlX';
 import Chart from './Component/chart';
@@ -25,9 +24,9 @@ import Logout from './Extra/Logout';
 import Dashboard from './Extra/Dashboard';
 import NotFound from './Extra/NotFound';
 import Timer from './Extra/Timer';
-import Intro_F from './Component/Intro_F';
-import New_user from './Extra/Nuevo_usuario';
-import Eraser from './Component/eraser';
+import Intro_F from './Component/User/Intro_F';
+import New_user from './Component/User/Nuevo_usuario';
+import Eraser from './Component/User/eraser';
 import Calendar from './Component/calendar';
 import Standart_p from './Component/standard_p2';
 
@@ -68,7 +67,7 @@ class App extends React.Component
                               Useless Url
                                   <Route exact path="/results" element={<Results/>} />
                                   <Route exact path="/control" element={<Control />} />
-                                  <Route exact path='/SurveyA' element={<SurveyA />} />
+                                  
                                   <Route exact path='/chartA' element={<ChartA />} />
                                   <Route exact path='/Timer' element={<Timer />} />
                                   <Route exact path='/calendar' element={<Calendar />} />

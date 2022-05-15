@@ -96,6 +96,7 @@
 {
     font-family:"Regular";
     font-size: 64px ;
+    background-color: white;
 }
 
 
@@ -139,8 +140,8 @@
 
 .image_exit_F
 {
-    width: 10%;
-    height: 10%;
+    width: 80px;
+    height: 80px;
     padding-bottom: 100px;
 }
 
@@ -196,6 +197,11 @@
 
 @media only screen and (max-width: 767px) {
 
+    .intro_title
+    {
+        width: 80%;
+    }
+
     .Intro_section
     {
         /* background-color: aqua; */
@@ -233,6 +239,13 @@
     {
         width: 100%;
         height: 100%;
+    }
+
+    .intro_imgFF
+    {
+        padding-bottom: 0px;
+        max-width: 50%;
+        height: 70px;
     }
     
   }
