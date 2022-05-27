@@ -21,9 +21,13 @@ The webpage is compose of two sections one for users and another for admin:
         3. Message control: the message of the participants can ony being seem by Admins andd they also has power to erase them if wanted.    
 
 Weboage main features:
-    0. Tokens for Language: Spanish and France
+    0. Tokens for Language: Spanish and France.
+        <img width="139" alt="Screen Shot 2022-05-27 at 1 52 38 PM" src="https://user-images.githubusercontent.com/44034603/170764728-cdad2200-5334-4708-9f0a-11058fdc7538.png">
+
     
     1. Pie chart for votes regarding Gender.
+        <img width="1116" alt="Screen Shot 2022-05-27 at 1 51 13 PM" src="https://user-images.githubusercontent.com/44034603/170764772-b5c5cc62-3804-42cb-b440-f8d106b2ac59.png">
+
     
     2. Display of participantes, two version, one for client, second for Admin.
 
