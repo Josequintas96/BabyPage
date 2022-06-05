@@ -24,8 +24,8 @@ Weboage main features:
 
     1. Tokens for Language: Spanish and France.
     
-    2. Pie chart for votes regarding Gender.
-        <img width="200" alt="" src="https://user-images.githubusercontent.com/44034603/170764772-b5c5cc62-3804-42cb-b440-f8d106b2ac59.png">
+    2. Pie chart for votes regarding Gender. 
+<img width="200" alt="" src="https://user-images.githubusercontent.com/44034603/170764772-b5c5cc62-3804-42cb-b440-f8d106b2ac59.png">
     
     3. Display of participantes, two version, one for client, second for Admin.
 
